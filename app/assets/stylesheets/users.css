@@ -1,0 +1,25 @@
+/* Users controller */
+
+    /* Show action */
+
+        /* User name in the center */
+        .name_line {
+            font-size: 35px;
+            font-family: "micfont";
+        }
+
+        /* Date of posts */
+        .date {
+            color: #AAA;
+            font-size: 32px;
+        }
+
+        /* Post deleting button: "Удалить" */
+        .social_post a {
+            color: #F9BD27;
+        }
+
+/* end Show action */
+
+/* end */
+

@@ -1,0 +1,2 @@
+module SocialUsers::OmniauthCallbacksHelper
+end

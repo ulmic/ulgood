@@ -1,0 +1,43 @@
+/* Main controller */
+
+    /* Home action */
+
+        /* Social icons to post */
+        .social_post {
+            -webkit-transition: all 0.6s ease;
+            -moz-transition:    all 0.6s ease;
+            -o-transition:      all 0.6s ease;
+            opacity: 0;
+        }
+
+        /* Post button "А что сделал ты?" (link_tag) */
+        .post_button {
+            color: black;
+            background-color:white;
+            padding:7px;
+            position:absolute;
+            font-family: 'micfont';
+            font-size:35px;
+            text-decoration:none;
+            border: solid 6px #f9bd27;
+            border-radius: 25px;
+            border-bottom-color:#eba800;
+            border-right-color:#eba800;
+        }
+
+        /* Active post button (overloading) */
+        .post_button:active {
+            border: solid 6px #eba800;
+            border-bottom-color:#f9bd27;
+            border-right-color:#f9bd27;
+        }
+
+        /* List item link to the user */   /* CHECK FOR NECESSARY */
+        .today_list_item a {
+            color: #F9BD27;
+        }
+
+    /* end Home action */
+
+/* end */
+

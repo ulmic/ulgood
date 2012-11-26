@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Ulgood.Ru
+  </title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "tripleflap" %>
+  <%= csrf_meta_tags %>
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+  <% if social_user_signed_in? %>
+      <div class = "user_panel">
+        <div class = "logout_button">
+          <%= link_to "Выход", destroy_social_user_session_path, :method => :delete %>
+        </div>
+        <div class = "user_name">
+          Здравствуйте,
+          <%= link_to current_social_user.user.name, :controller => "users", :action => "show", :id => current_social_user.user_id %>
+
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+  <% end %>
+  <%= link_to(image_tag("mic_logo.png", :alt => "ulmic.ru"), "http://www.ulmic.ru", :class => "miclogo") %>
+  <%= link_to("НИ ДНЯ БЕЗ ДОБРЫХ ДЕЛ!", '/', :class => "header_text") %>
+  <%= image_tag ("smile.png"), :class => "smile" %>
+</header>
+<%=raw counters %>
+<div class="content">
+  <%= yield %>
+</div>
+<footer>
+  2012, Ulgood.ru, УОМОО "Молодёжный Инициативный Центр", ulmic.ru
+  <%= link_to "Нашли ошибку?", "mailto:ulgood73@gmail.com" %>
+<script type='text/javascript' charset='utf-8'>
+    TwitterBird();
+</script>
+</footer>
+</body>
+</html>

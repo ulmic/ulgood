@@ -1,0 +1,2 @@
+module SocialUsersHelper
+end
