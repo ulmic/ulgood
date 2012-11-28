@@ -3,21 +3,26 @@ module UsersHelper
 
   def social_panel
     panel = ""
+    social_links = {:vkontakte => "", :facebook => "", :twitter => "", :google => ""}
       @user.social_users.each do |social_user|
-        case social_user.provider
-          #TODO: Code repeat!
-          when "vkontakte"
-            social_image = image_tag("vk-icon.png", :alt => "vk.com", :class => "round")
-            panel += link_to(social_image, social_user.url)
-          when "facebook"
-            social_image = image_tag("facebook-icon.png", :alt => "facebook.com", :class => "round")
-            panel += link_to(social_image, social_user.url)
-          when "twitter"
-            social_image = image_tag("twitter-icon.png", :alt => "twitter.com", :class => "round")
-            panel += link_to(social_image, social_user.url)
-          when "google"
-            social_image = image_tag("google-icon.png", :alt => "google.com", :class => "round")
-            panel += link_to(social_image, social_user.url)
+        if params[:id] != current_social_user.id
+          case social_user.provider
+            #TODO: Code repeat!
+            when "vkontakte"
+              social_image = image_tag("vk-icon.png", :alt => "vk.com", :class => "round")
+              panel += link_to(social_image, social_user.url)
+            when "facebook"
+              social_image = image_tag("facebook-icon.png", :alt => "facebook.com", :class => "round")
+              panel += link_to(social_image, social_user.url)
+            when "twitter"
+              social_image = image_tag("twitter-icon.png", :alt => "twitter.com", :class => "round")
+              panel += link_to(social_image, social_user.url)
+            when "google"
+              social_image = image_tag("google-icon.png", :alt => "google.com", :class => "round")
+              panel += link_to(social_image, social_user.url)
+          end
+        else
+          social_links[social_user.provider.to_sym] = social_user.url
         end
       end
     panel

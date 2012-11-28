@@ -19,4 +19,8 @@ class UsersController < ApplicationController
     redirect_to :root
   end
 
+  def add
+
+  end
+
 end

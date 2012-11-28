@@ -1,4 +1,6 @@
 # -*- encoding : utf-8 -*-
+require "social_users/omniauth_callbacks_helper"
+
 module ApplicationHelper
 
   def counters
