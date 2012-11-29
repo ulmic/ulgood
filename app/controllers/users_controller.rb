@@ -20,7 +20,8 @@ class UsersController < ApplicationController
   end
 
   def add
-
+    cookies[:provider] = params[:provider]
+    cookies[:user] = current_social_user.user.id
   end
 
 end

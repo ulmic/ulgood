@@ -6,28 +6,36 @@ module UsersHelper
       #TODO: Code repeat!
       when "vkontakte"
         social_image = image_tag("vk-icon#{gray}.png", :alt => "vk.com", :class => "round")
+        prov = "vkontakte" unless gray.blank?
       when "facebook"
-        click_action = "sfd"
-        social_image = image_tag("facebook-icon#{gray}.png", :alt => "facebook.com", :class => "round", :onclick => click_action)
+        social_image = image_tag("facebook-icon#{gray}.png", :alt => "facebook.com", :class => "round")
+        prov = "facebook" unless gray.blank?
       when "twitter"
         social_image = image_tag("twitter-icon#{gray}.png", :alt => "twitter.com", :class => "round")
+        prov = "twitter" unless gray.blank?
       when "google"
         social_image = image_tag("google-icon#{gray}.png", :alt => "google.com", :class => "round")
+        prov = "google" unless gray.blank?
     end
-    link_to(social_image, url, :onclick => click_action)
+    if gray.blank?
+      link_to(social_image, url)
+    else
+      link_to(social_image, :controller => "users", :action => "add", :provider => prov)
+    end
+
   end
 
   def social_panel
     panel = ""
     social_links = {:vkontakte => "", :facebook => "", :twitter => "", :google => ""}
       @user.social_users.each do |social_user|
-        unless params[:id] == current_social_user.id.to_s
+        unless params[:id] == current_social_user.user.id.to_s
           panel += get_social_link_icon social_user.provider, social_user.url
         else
           social_links[social_user.provider.to_sym] = social_user.url
         end
       end
-    if params[:id] == current_social_user.id.to_s
+    if params[:id] == current_social_user.user.id.to_s
       social_links.keys.each do |key|
         if social_links[key].blank?
           panel += get_social_link_icon key.to_s, "", "-gray"
@@ -63,7 +71,7 @@ module UsersHelper
 </div>
 }
         end
-        messages_post += "<div class = \"message_item\" onmouseover = \"showSocialButtons(this);\" onmouseout = \"hideSocialButtons(this)\">- #{m.message} <span class = \"social_post\">#{link_to "Удалить", :controller => "message", :action => "delete", :id => m.id if m.social_user == current_social_user || User.find(current_social_user.id).admin? }</span></div>"
+        messages_post += "<div class = \"message_item\" onmouseover = \"showSocialButtons(this);\" onmouseout = \"hideSocialButtons(this)\">- #{m.message} <span class = \"social_post\">#{link_to "Удалить", :controller => "message", :action => "delete", :id => m.id if m.social_user == current_social_user || current_social_user.user.admin? }</span></div>"
       end
       messages_post
     end
