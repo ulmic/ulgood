@@ -7,13 +7,14 @@ module UsersHelper
       when "vkontakte"
         social_image = image_tag("vk-icon#{gray}.png", :alt => "vk.com", :class => "round")
       when "facebook"
-        social_image = image_tag("facebook-icon#{gray}.png", :alt => "facebook.com", :class => "round")
+        click_action = "sfd"
+        social_image = image_tag("facebook-icon#{gray}.png", :alt => "facebook.com", :class => "round", :onclick => click_action)
       when "twitter"
         social_image = image_tag("twitter-icon#{gray}.png", :alt => "twitter.com", :class => "round")
       when "google"
         social_image = image_tag("google-icon#{gray}.png", :alt => "google.com", :class => "round")
     end
-    link_to(social_image, url)
+    link_to(social_image, url, :onclick => click_action)
   end
 
   def social_panel
