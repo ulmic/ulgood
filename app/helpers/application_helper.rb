@@ -8,7 +8,7 @@ module ApplicationHelper
       <div class="simple_counter">
         Добрых дел за сегодня:
           <div class="counter_number">
-    #{Message.where(:created_at=>Time.now.midnight..Time.now+(60*60*4)).count}
+    #{Message.where(:created_at=>Time.now.midnight+(60*60*4)..Time.now).count}
           </div>
       </div>
     <div style="width:10px; display: inline-block;"></div>
