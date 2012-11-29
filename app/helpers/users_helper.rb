@@ -1,30 +1,40 @@
 # -*- encoding : utf-8 -*-
 module UsersHelper
 
+  def get_social_link_icon (provider, url, gray="")
+    case provider
+      #TODO: Code repeat!
+      when "vkontakte"
+        social_image = image_tag("vk-icon#{gray}.png", :alt => "vk.com", :class => "round")
+      when "facebook"
+        social_image = image_tag("facebook-icon#{gray}.png", :alt => "facebook.com", :class => "round")
+      when "twitter"
+        social_image = image_tag("twitter-icon#{gray}.png", :alt => "twitter.com", :class => "round")
+      when "google"
+        social_image = image_tag("google-icon#{gray}.png", :alt => "google.com", :class => "round")
+    end
+    link_to(social_image, url)
+  end
+
   def social_panel
     panel = ""
     social_links = {:vkontakte => "", :facebook => "", :twitter => "", :google => ""}
       @user.social_users.each do |social_user|
-        if params[:id] != current_social_user.id
-          case social_user.provider
-            #TODO: Code repeat!
-            when "vkontakte"
-              social_image = image_tag("vk-icon.png", :alt => "vk.com", :class => "round")
-              panel += link_to(social_image, social_user.url)
-            when "facebook"
-              social_image = image_tag("facebook-icon.png", :alt => "facebook.com", :class => "round")
-              panel += link_to(social_image, social_user.url)
-            when "twitter"
-              social_image = image_tag("twitter-icon.png", :alt => "twitter.com", :class => "round")
-              panel += link_to(social_image, social_user.url)
-            when "google"
-              social_image = image_tag("google-icon.png", :alt => "google.com", :class => "round")
-              panel += link_to(social_image, social_user.url)
-          end
+        unless params[:id] == current_social_user.id.to_s
+          panel += get_social_link_icon social_user.provider, social_user.url
         else
           social_links[social_user.provider.to_sym] = social_user.url
         end
       end
+    if params[:id] == current_social_user.id.to_s
+      social_links.keys.each do |key|
+        if social_links[key].blank?
+          panel += get_social_link_icon key.to_s, "", "-gray"
+        else
+          panel += get_social_link_icon key.to_s, social_links[key]
+        end
+      end
+    end
     panel
   end
 
