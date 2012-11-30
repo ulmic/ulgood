@@ -5,7 +5,7 @@ class SocialUsers::OmniauthCallbacksController < ApplicationController
   end
 
   def facebook
-    user = SocialUser.find_for_facebook_oauth request.env["omniauth.auth"]
+      user = SocialUser.find_for_facebook_oauth request.env["omniauth.auth"], cookies[:user]
     if user.persisted?
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Facebook"
       sign_in_and_redirect user, :event => :authentication
@@ -16,7 +16,7 @@ class SocialUsers::OmniauthCallbacksController < ApplicationController
   end
 
   def vkontakte
-    user = SocialUser.find_for_vkontakte_oauth request.env["omniauth.auth"]
+    user = SocialUser.find_for_vkontakte_oauth request.env["omniauth.auth"], cookies[:user]
     if user.persisted?
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Vkontakte"
       sign_in_and_redirect user, :event => :authentication
@@ -27,7 +27,7 @@ class SocialUsers::OmniauthCallbacksController < ApplicationController
   end
 
   def twitter
-    user = SocialUser.find_for_twitter_oauth request.env["omniauth.auth"]
+    user = SocialUser.find_for_twitter_oauth request.env["omniauth.auth"], cookies[:user]
     if user.persisted?
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Twitter"
       sign_in_and_redirect user, :event => :authentication
@@ -38,7 +38,7 @@ class SocialUsers::OmniauthCallbacksController < ApplicationController
   end
 
   def google
-    user = SocialUser.find_for_google_oauth request.env["omniauth.auth"]
+    user = SocialUser.find_for_google_oauth request.env["omniauth.auth"], cookies[:user]
     if user.persisted?
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Google"
       sign_in_and_redirect user, :event => :authentication

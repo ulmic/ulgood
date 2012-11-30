@@ -1,4 +1,6 @@
 # -*- encoding : utf-8 -*-
+require "social_users/omniauth_callbacks_helper"
+
 module ApplicationHelper
 
   def counters
@@ -8,7 +10,7 @@ module ApplicationHelper
       <div class="simple_counter">
         Добрых дел за сегодня:
           <div class="counter_number">
-    #{Message.where(:created_at=>Time.now.midnight+(60*60*4)..Time.now).count}
+    #{Message.where(:created_at => Time.now.midnight+(60*60*4)..Time.now).count}
           </div>
       </div>
     <div style="width:10px; display: inline-block;"></div>

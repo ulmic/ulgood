@@ -11,7 +11,7 @@ UlgoodRv5::Application.routes.draw do
   match "thanks" => "message#thanks"
   match "messages/delete" => "message#delete"
   match "users/delete" => "users#delete"
-
+  match "users/add" => "users#add"
 
   resources :users, :only => [:show]
 
