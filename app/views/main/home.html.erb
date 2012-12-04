@@ -1,9 +1,8 @@
 <% if social_user_signed_in? %>
+    <div class="alpha_block"></div>
     <span style = "font-size:40px; color:#aaa;">СЕГОДНЯ:</span>
     <br>
     <%=raw posts params[:messages] %>
-    <br>
-      <a class="post_button" href='/create'>А что сделал ты?</a>
 <% else %>
     <br>
     <span style="color:#f9bd27">

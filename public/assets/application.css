@@ -120,7 +120,7 @@
 
     /* Footer */
     footer {
-        position:absolute;
+        position:fixed;
         bottom: 0%;
         width: 99%;
         font-family: "micfont";
@@ -133,7 +133,48 @@
             color: #F9BD27;
         }
     /* end Footer */
+/* New post form */
+.post_form {
+    font-size: 25px;
+    font-family: "micfont";
+    width:500px;
+    position: fixed;
+    top: 250px;
 
+}
+
+/* Message text area */
+.post_form textarea {
+    text-indent: 3px;
+    border-radius:10px;
+    background-color: white;
+    border: 2px solid #f9bd27;
+    border-color: #f9bd27;
+    height: 50px;
+    width: 500px;
+    resize: none;
+}
+
+/* Message text area highlighting on focus */
+.post_form textarea:focus {
+    outline:none;
+    border-radius:10 px;
+    background-color: #EEE;
+    border: 2px solid #f9bd27;
+    border-color: #f9bd27;
+}
+
+/* Submit button */
+.post_form input[type="submit"] {
+    border-radius:10px;
+    background-color: #f9bd27;
+    border-color: #f9bd27;
+    color: #FFF;
+    font-size: 25px;
+    font-family: "micfont";
+}
+
+/* end New post form */
 /* end */
 
 /* Main controller */
@@ -184,51 +225,13 @@
 
     /* Create action */
 
-        /* New post form */
-
-        .post_form {
-            width:500px;
-        }
-
-            /* Message text area */
-            .post_form textarea {
-                text-indent: 3px;
-                border-radius:10px;
-                background-color: white;
-                border: 2px solid #f9bd27;
-                border-color: #f9bd27;
-                height: 50px;
-                width: 500px;
-                resize: none;
-            }
-
-            /* Message text area highlighting on focus */
-            .post_form textarea:focus {
-                outline:none;
-                border-radius:10 px;
-                background-color: #EEE;
-                border: 2px solid #f9bd27;
-                border-color: #f9bd27;
-            }
-
-            /* Submit button */
-            .post_form input[type="submit"] {
-                border-radius:10px;
-                background-color: #f9bd27;
-                border-color: #f9bd27;
-                color: #FFF;
-                font-size: 25px;
-                font-family: "micfont";
-            }
-
-        /* end New post form */
-
     /* end Create action */
 
 
     /* Thanks action */
 
     /* Link to home: "Вернуться на главную" */
+
     .home_link {
         color: #F9BD27;
     }
