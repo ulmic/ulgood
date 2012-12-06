@@ -1,5 +1,63 @@
 /* Main controller */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+    /* New post form */
+.post_form {
+        font-size: 25px;
+        font-family: "micfont";
+        width:625px;
+        position: relative;
+        top: 110px;
+        left: 320px;
 
+    }
+
+/* Message text area */
+.post_form textarea {
+    position:absolute;
+    text-indent: 3px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: white;
+    border: 2px solid #f9bd27;
+    border-color: #f9bd27;
+    height: 50px;
+    width: 76%;
+    resize: none;
+}
+
+/* Message text area highlighting on focus */
+.post_form textarea:focus {
+    outline:none;
+    border-radius:10 px;
+    background-color: #EEE;
+    border: 2px solid #f9bd27;
+    border-color: #f9bd27;
+}
+
+/* Submit button */
+.post_form input[type="submit"] {
+    position: absolute;
+    top:52px;
+    right: 0%;
+    height: 58px;;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #f9bd27;
+    border-color: #f9bd27;
+    color: #FFF;
+    font-size: 25px;
+    font-family: "micfont";
+}
+
+/* end New post form */
     /* Home action */
 
         /* Social icons to post */
@@ -33,6 +91,15 @@
         }
 
         /* List item link to the user */   /* CHECK FOR NECESSARY */
+        .today_list_item {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+
+
         .today_list_item a {
             color: #F9BD27;
         }
@@ -41,3 +108,72 @@
 
 /* end */
 
+
+/* Main div in the center */
+.content {
+    font-family: micfont;
+    font-size: 25px;
+    position: relative;
+    left: 320px;
+    top: 240px;
+    width:50%;
+}
+
+/* Links in the Main div */
+body a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Posts counters */
+
+/* Counter div */
+.counters {
+    z-index:5;
+    position: fixed;
+    top: 140px;
+    right: 20px;
+    font-family: "micfont";
+    font-size: 20px;
+}
+
+/* Digits in counters */
+.counter_number {
+    font-family: "micfont";
+    font-size: 60px;
+    color: #AAA;
+    text-align: center;
+}
+.counter_number a{
+    color: #AAA;
+}
+
+.simple_counter {
+    display: inline-block;
+    width: 120px;
+}
+
+/* end Posts counters */
+.top_alpha_block {
+    z-index: 0;
+    position:fixed;
+    top: 0%;
+    height: 280px;
+    width:100%;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(80%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+}
+.bottom_alpha_block {
+     z-index: 0;
+     position:fixed;
+     top: 95%;
+     height: 5%;
+     width:100%;
+     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1)));
+ }
+
+.message_item {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

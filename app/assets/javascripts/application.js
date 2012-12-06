@@ -29,3 +29,23 @@ function hideSocialButtons(el) {
         }
     }
 }
+
+function counter(el)
+{
+    var wrapper = document.createElement('DIV');
+    wrapper.innerHTML = el.value;
+    var len = (wrapper.textContent || wrapper.innerText).length;
+    document.getElementById('count').innerHTML = 100-len;
+}
+
+function show_full(el) {
+    if (el.style.whiteSpace == "nowrap" || el.style.whiteSpace == "") {
+        el.style.whiteSpace = "normal";
+        el.style.wordWrap = "break-word";
+        el.style.overflow = "normal";
+    } else {
+        el.style.overflow = "hidden";
+        el.style.whiteSpace = "nowrap";
+        el.style.wordWrap = "";
+    };
+}

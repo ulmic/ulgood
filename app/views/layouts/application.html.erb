@@ -28,13 +28,26 @@
   <% end %>
   <%= link_to(image_tag("mic_logo.png", :alt => "ulmic.ru"), "http://www.ulmic.ru", :class => "miclogo") %>
   <%= link_to("НИ ДНЯ БЕЗ ДОБРЫХ ДЕЛ!", '/', :class => "header_text") %>
-  <%= image_tag ("smile.png"), :class => "smile" %>
+  <% if social_user_signed_in? %>
+  <div class = "post_form">
+    <%= form_for :message, :url => "/create" do |f| %>
+        Я сегодня:
+        <br>
+        <%= f.text_area :message, :onkeypress => "counter(this);", :onkeyup => "counter(this);", :onchange => "counter(this);", :maxlength => 100, :cols => 40, :rows => 3, :required => ""%>
+        <br>
+        <span id='count' style= "position:relative; float:right; right:145px; font-size: 20px; font-weight: bold; bottom:-3px">100</span>
+        <%= f.submit :value => "Рассказать!" %>
+    <% end %>
+  </div>
+  <% end %>
+
 </header>
 <%=raw counters %>
 <div class="content">
   <%= yield %>
 </div>
 <footer>
+  <%= image_tag ("smile.png"), :class => "smile" %>
   2012, Ulgood.ru, УОМОО "Молодёжный Инициативный Центр", ulmic.ru
   <%= link_to "Нашли ошибку?", "mailto:ulgood73@gmail.com" %>
 <script type='text/javascript' charset='utf-8'>

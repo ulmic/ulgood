@@ -11,7 +11,7 @@ class MessageController < ApplicationController
       message = Message.new
       message.social_user_id = current_social_user.id
       message.message = params[:message].values[0].to_message
-      message.created_at = Time.now + (60*60*4)
+      message.created_at = Time.now
       message.save!
 
       redirect_to :action => "thanks"
