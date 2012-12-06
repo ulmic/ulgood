@@ -71,7 +71,7 @@ module UsersHelper
 </div>
 }
         end
-        messages_post += "<div class = \"message_item\" onmouseover = \"showSocialButtons(this);\" onmouseout = \"hideSocialButtons(this)\">- #{m.message} <span class = \"social_post\">#{link_to "Удалить", :controller => "message", :action => "delete", :id => m.id if m.social_user == current_social_user || current_social_user.user.admin? }</span></div>"
+        messages_post += "<div class = \"message_item\" #{'onclick = "show_full(this);" style="cursor:pointer;"' if m.message.length > 50 } onmouseover = \"showSocialButtons(this);\" onmouseout = \"hideSocialButtons(this)\">#{image_tag("#{m.social_user.provider}-small-icon.png")} #{m.message} <span class = \"social_post\">#{link_to "Удалить", :controller => "message", :action => "delete", :id => m.id if m.social_user == current_social_user || current_social_user.user.admin? }</span></div>"
       end
       messages_post
     end
