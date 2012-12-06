@@ -20,7 +20,7 @@ module MainHelper
 						<a class = "user_name" href = 'users/#{m.social_user.user_id}'>
               #{m.social_user.user.name}
 						</a>
-						#{m.message}
+						  #{m.message}
 						<span class = "social_post">
               #{link_to image_tag("vk-small-icon.png", :alt => "В"), "http://vkontakte.ru/share.php?url=http://127.0.0.1:3000/&image=http://127.0.0.1:3000/assets/mic_logo.png&title=Ulgood.ru: #{m.social_user.user.name} #{m.message} "}
 						</span>
