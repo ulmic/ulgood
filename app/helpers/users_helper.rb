@@ -2,21 +2,8 @@
 module UsersHelper
 
   def get_social_link_icon (provider, url, gray="")
-    case provider
-      #TODO: Code repeat!
-      when "vkontakte"
-        social_image = image_tag("vk-icon#{gray}.png", :alt => "vk.com", :class => "round")
-        prov = "vkontakte" unless gray.blank?
-      when "facebook"
-        social_image = image_tag("facebook-icon#{gray}.png", :alt => "facebook.com", :class => "round")
-        prov = "facebook" unless gray.blank?
-      when "twitter"
-        social_image = image_tag("twitter-icon#{gray}.png", :alt => "twitter.com", :class => "round")
-        prov = "twitter" unless gray.blank?
-      when "google"
-        social_image = image_tag("google-icon#{gray}.png", :alt => "google.com", :class => "round")
-        prov = "google" unless gray.blank?
-    end
+    social_image = image_tag("#{provider}-icon#{gray}.png", :alt => "#{provider}.com", :class => "round")
+    prov = provider unless gray.blank?
     if gray.blank?
       link_to(social_image, url)
     else
