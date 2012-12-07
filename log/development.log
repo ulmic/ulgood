@@ -34439,3 +34439,2206 @@ Served asset /tripleflap.js - 304 Not Modified (6ms)
 
 Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-06 13:50:07 +0400
 Served asset /main.css - 200 OK (5ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/1" for unknown at 2012-12-07 08:43:39 +0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 306ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=1):
+  app/controllers/users_controller.rb:6:in `show'
+
+
+  Rendered /home/aelaa/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.7ms)
+  Rendered /home/aelaa/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.7ms)
+  Rendered /home/aelaa/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (70.6ms)
+
+
+Started GET "/" for unknown at 2012-12-07 08:43:40 +0400
+Processing by MainController#home as HTML
+  Rendered main/home.html.erb within layouts/application (9.4ms)
+Compiled main.css  (1ms)  (pid 1968)
+Compiled message.css  (1ms)  (pid 1968)
+Compiled users.css  (1ms)  (pid 1968)
+Compiled application.css  (52ms)  (pid 1968)
+Compiled jquery.js  (12ms)  (pid 1968)
+Compiled jquery_ujs.js  (2ms)  (pid 1968)
+Compiled application.js  (234ms)  (pid 1968)
+Compiled tripleflap.js  (2ms)  (pid 1968)
+Completed 200 OK in 575ms (Views: 573.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 08:43:41 +0400
+Served asset /main.css - 200 OK (18ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 08:43:41 +0400
+Served asset /jquery.js - 200 OK (62ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 08:43:41 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 08:43:41 +0400
+Served asset /users.css - 200 OK (20ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 08:43:41 +0400
+Served asset /message.css - 200 OK (12ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 08:43:41 +0400
+Served asset /application.css - 200 OK (35ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 08:43:41 +0400
+Served asset /tripleflap.js - 200 OK (10ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 08:43:41 +0400
+Served asset /application.js - 200 OK (31ms)
+
+
+Started GET "/assets/vkontakte-icon.png" for unknown at 2012-12-07 08:43:42 +0400
+Served asset /vkontakte-icon.png - 200 OK (35ms)
+
+
+Started GET "/" for unknown at 2012-12-07 08:49:37 +0400
+Processing by MainController#home as HTML
+  Rendered main/home.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 08:49:37 +0400
+Served asset /application.css - 304 Not Modified (29ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 08:49:37 +0400
+Served asset /main.css - 304 Not Modified (30ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 08:49:38 +0400
+Served asset /jquery.js - 304 Not Modified (28ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 08:49:38 +0400
+Served asset /users.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 08:49:38 +0400
+Served asset /message.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 08:49:38 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 08:49:38 +0400
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 08:49:38 +0400
+Served asset /tripleflap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/vkontakte-icon.png" for unknown at 2012-12-07 08:49:38 +0400
+Served asset /vkontakte-icon.png - 304 Not Modified (1ms)
+
+
+Started GET "/login?provider=vkontakte" for unknown at 2012-12-07 08:50:03 +0400
+Processing by SocialUsersController#login as HTML
+  Parameters: {"provider"=>"vkontakte"}
+Redirected to http://aelaa.t.proxylocal.com/social_users/auth/vkontakte
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/social_users/auth/vkontakte" for unknown at 2012-12-07 08:50:03 +0400
+
+
+Started GET "/social_users/auth/vkontakte/callback?code=40aea411c7c5b799f3&state=aebd30ae0782949f781f023882e22a00e2d3f4c32a3bf262" for unknown at 2012-12-07 08:50:05 +0400
+Processing by SocialUsers::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"40aea411c7c5b799f3", "state"=>"aebd30ae0782949f781f023882e22a00e2d3f4c32a3bf262"}
+  [1m[35mSocialUser Load (1.3ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."url" = 'http://vk.com/haengbok' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  UPDATE "social_users" SET "last_sign_in_at" = '2012-12-06 08:37:03.430264', "current_sign_in_at" = '2012-12-07 04:51:10.113696', "sign_in_count" = 9, "updated_at" = '2012-12-07 04:51:10.120922' WHERE "social_users"."id" = 4
+  [1m[36m (203.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://aelaa.t.proxylocal.com/
+Completed 302 Found in 678ms (ActiveRecord: 209.4ms)
+
+
+Started GET "/login?provider=vkontakte" for unknown at 2012-12-07 08:51:10 +0400
+Processing by SocialUsersController#login as HTML
+  Parameters: {"provider"=>"vkontakte"}
+Redirected to http://aelaa.t.proxylocal.com/social_users/auth/vkontakte
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/social_users/auth/vkontakte" for unknown at 2012-12-07 08:51:10 +0400
+
+
+Started GET "/social_users/auth/vkontakte/callback?code=a03f64ca0ce151b880&state=69c6b221f9fefbe7dc9998a7294e0525c801cf297aa3d7db" for unknown at 2012-12-07 08:51:11 +0400
+Processing by SocialUsers::OmniauthCallbacksController#vkontakte as HTML
+  Parameters: {"code"=>"a03f64ca0ce151b880", "state"=>"69c6b221f9fefbe7dc9998a7294e0525c801cf297aa3d7db"}
+  [1m[35mSocialUser Load (1.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."url" = 'http://vk.com/haengbok' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  UPDATE "social_users" SET "last_sign_in_at" = '2012-12-07 04:51:10.113696', "current_sign_in_at" = '2012-12-07 04:52:15.022377', "sign_in_count" = 10, "updated_at" = '2012-12-07 04:52:15.026420' WHERE "social_users"."id" = 4
+  [1m[36m (242.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://aelaa.t.proxylocal.com/
+Completed 302 Found in 265ms (ActiveRecord: 244.5ms)
+
+
+Started GET "/login?provider=twitter" for unknown at 2012-12-07 08:52:15 +0400
+Processing by SocialUsersController#login as HTML
+  Parameters: {"provider"=>"twitter"}
+Redirected to http://aelaa.t.proxylocal.com/social_users/auth/twitter
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/social_users/auth/twitter" for unknown at 2012-12-07 08:52:15 +0400
+
+
+Started GET "/social_users/auth/twitter/callback?oauth_token=RK9jtG6YL6hEmXAdgtkmpKflegJO3CBAGyhUJhzURQ&oauth_verifier=P9kr8li0yHFAssKGqC0wkooT0NRW1SwQjiftnenAzE" for unknown at 2012-12-07 08:52:18 +0400
+Processing by SocialUsers::OmniauthCallbacksController#twitter as HTML
+  Parameters: {"oauth_token"=>"RK9jtG6YL6hEmXAdgtkmpKflegJO3CBAGyhUJhzURQ", "oauth_verifier"=>"P9kr8li0yHFAssKGqC0wkooT0NRW1SwQjiftnenAzE"}
+  [1m[35mSocialUser Load (1.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."url" = 'http://twitter.com/Mei_Li_Kitten' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  UPDATE "social_users" SET "current_sign_in_at" = '2012-12-07 04:52:20.310815', "sign_in_count" = 2, "updated_at" = '2012-12-07 04:52:20.315168' WHERE "social_users"."id" = 5
+  [1m[36m (311.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://aelaa.t.proxylocal.com/
+Completed 302 Found in 338ms (ActiveRecord: 313.9ms)
+
+
+Started GET "/" for unknown at 2012-12-07 08:52:20 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (1.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 08:52:20.912709')[0m
+  Rendered main/home.html.erb within layouts/application (41.3ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 04:52:21.274104')[0m
+  [1m[35mMessage Load (1.4ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 454ms (Views: 447.6ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 08:52:21 +0400
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 08:52:21 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 08:52:21 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 08:52:21 +0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 08:52:21 +0400
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 08:52:21 +0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 08:52:21 +0400
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 08:52:21 +0400
+Served asset /tripleflap.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for unknown at 2012-12-07 08:53:05 +0400
+Processing by MainController#home as HTML
+  [1m[36mSocialUser Load (1.2ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 08:53:05.407127')
+  Rendered main/home.html.erb within layouts/application (10.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 04:53:05.453463')
+  [1m[36mMessage Load (1.0ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 76ms (Views: 71.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 08:53:05 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 08:53:05 +0400
+Served asset /application.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 08:53:05 +0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 08:53:05 +0400
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 08:53:06 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 08:53:06 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 08:53:06 +0400
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 08:53:06 +0400
+Served asset /tripleflap.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for unknown at 2012-12-07 08:55:08 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (1.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 08:55:08.694567')[0m
+  Rendered main/home.html.erb within layouts/application (9.3ms)
+Compiled main.css  (1ms)  (pid 1968)
+Compiled application.css  (14ms)  (pid 1968)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 04:55:08.928580')[0m
+  [1m[35mMessage Load (1.1ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 262ms (Views: 257.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 08:55:09 +0400
+Served asset /application.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 08:55:09 +0400
+Served asset /main.css - 200 OK (12ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 08:55:09 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 08:55:09 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 08:55:09 +0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 08:55:09 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 08:55:09 +0400
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 08:55:09 +0400
+Served asset /tripleflap.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for unknown at 2012-12-07 08:55:58 +0400
+Processing by MainController#home as HTML
+  [1m[36mSocialUser Load (0.9ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 08:55:58.917362')
+  Rendered main/home.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 04:55:58.964615')
+  [1m[36mMessage Load (1.6ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 77ms (Views: 71.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 08:55:59 +0400
+Served asset /application.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 08:55:59 +0400
+Served asset /main.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 08:55:59 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 08:55:59 +0400
+Served asset /application.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 08:55:59 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 08:55:59 +0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 08:55:59 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 08:55:59 +0400
+Served asset /tripleflap.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for unknown at 2012-12-07 08:56:00 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (0.9ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 08:56:00.168126')[0m
+  Rendered main/home.html.erb within layouts/application (9.3ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 04:56:00.214906')[0m
+  [1m[35mMessage Load (1.1ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 73ms (Views: 68.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 08:56:00 +0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 08:56:00 +0400
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 08:56:00 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 08:56:00 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 08:56:00 +0400
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 08:56:00 +0400
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 08:56:00 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 08:56:00 +0400
+Served asset /tripleflap.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for unknown at 2012-12-07 08:56:49 +0400
+Processing by MainController#home as HTML
+  [1m[36mSocialUser Load (1.1ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 08:56:49.948627')
+  Rendered main/home.html.erb within layouts/application (15.4ms)
+Compiled main.css  (1ms)  (pid 1968)
+Compiled application.css  (15ms)  (pid 1968)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 04:56:50.110242')
+  [1m[36mMessage Load (1.6ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 208ms (Views: 202.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 08:56:50 +0400
+Served asset /main.css - 200 OK (156ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 08:56:50 +0400
+Served asset /message.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 08:56:50 +0400
+Served asset /application.css - 304 Not Modified (237ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 08:56:50 +0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 08:56:50 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 08:56:50 +0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 08:56:50 +0400
+Served asset /users.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 08:56:50 +0400
+Served asset /tripleflap.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for unknown at 2012-12-07 08:57:28 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (1.3ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 08:57:28.358480')[0m
+  Rendered main/home.html.erb within layouts/application (12.2ms)
+Compiled main.css  (2ms)  (pid 1968)
+Compiled application.css  (14ms)  (pid 1968)
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 04:57:28.530343')[0m
+  [1m[35mMessage Load (1.6ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 208ms (Views: 202.0ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 08:57:28 +0400
+Served asset /application.css - 304 Not Modified (78ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 08:57:28 +0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 08:57:28 +0400
+Served asset /main.css - 200 OK (11ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 08:57:28 +0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 08:57:29 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 08:57:29 +0400
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 08:57:29 +0400
+Served asset /message.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 08:57:29 +0400
+Served asset /tripleflap.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for unknown at 2012-12-07 08:57:58 +0400
+Processing by MainController#home as HTML
+  [1m[36mSocialUser Load (1.3ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 08:57:58.889273')
+  Rendered main/home.html.erb within layouts/application (15.7ms)
+Compiled main.css  (2ms)  (pid 1968)
+Compiled application.css  (17ms)  (pid 1968)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 04:57:59.070185')
+  [1m[36mMessage Load (1.6ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 223ms (Views: 217.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 08:57:59 +0400
+Served asset /main.css - 200 OK (26ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 08:57:59 +0400
+Served asset /application.css - 304 Not Modified (94ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 08:57:59 +0400
+Served asset /message.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 08:57:59 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 08:57:59 +0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 08:57:59 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 08:57:59 +0400
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 08:57:59 +0400
+Served asset /tripleflap.js - 304 Not Modified (2ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 08:58:07 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[35mSocialUser Load (0.9ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mMessage Load (1.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  [1m[35mSocialUser Load (1.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSocialUser Load (1.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mSocialUser Load (1.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered main/home.html.erb within layouts/application (201.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 04:58:07.686094')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 265ms (Views: 256.9ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 08:58:07 +0400
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 08:58:07 +0400
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 08:58:08 +0400
+Served asset /message.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 08:58:08 +0400
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 08:58:08 +0400
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 08:58:08 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 08:58:08 +0400
+Served asset /tripleflap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 08:58:08 +0400
+Served asset /users.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/vkontakte-small-icon.png" for unknown at 2012-12-07 08:58:08 +0400
+Served asset /vkontakte-small-icon.png - 200 OK (40ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 09:05:46 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[36mSocialUser Load (186.1ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mMessage Load (1.1ms)[0m  SELECT "messages".* FROM "messages" 
+  [1m[36mSocialUser Load (1.2ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSocialUser Load (0.9ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mSocialUser Load (0.9ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  Rendered main/home.html.erb within layouts/application (370.2ms)
+Compiled main.css  (1ms)  (pid 1968)
+Compiled application.css  (17ms)  (pid 1968)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (31.4ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:05:47.307714')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 788ms (Views: 563.4ms | ActiveRecord: 223.9ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:05:47 +0400
+Served asset /main.css - 200 OK (60ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:05:47 +0400
+Served asset /application.css - 304 Not Modified (40ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:05:47 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:05:47 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:05:47 +0400
+Served asset /tripleflap.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:05:48 +0400
+Served asset /jquery.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:05:48 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:05:48 +0400
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/vkontakte-small-icon.png" for unknown at 2012-12-07 09:05:48 +0400
+Served asset /vkontakte-small-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 09:06:47 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[35mSocialUser Load (1.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mMessage Load (1.5ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  [1m[35mSocialUser Load (1.4ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSocialUser Load (1.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mSocialUser Load (1.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered main/home.html.erb within layouts/application (314.1ms)
+Compiled main.css  (2ms)  (pid 1968)
+Compiled application.css  (15ms)  (pid 1968)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:06:48.403865')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 516ms (Views: 504.4ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:06:48 +0400
+Served asset /main.css - 200 OK (274ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:06:49 +0400
+Served asset /application.css - 304 Not Modified (51ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:06:49 +0400
+Served asset /message.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:06:49 +0400
+Served asset /jquery.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:06:49 +0400
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:06:49 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:06:49 +0400
+Served asset /users.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:06:49 +0400
+Served asset /tripleflap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/vkontakte-small-icon.png" for unknown at 2012-12-07 09:06:49 +0400
+Served asset /vkontakte-small-icon.png - 304 Not Modified (7ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 09:07:26 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[36mSocialUser Load (0.9ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mMessage Load (1.2ms)[0m  SELECT "messages".* FROM "messages" 
+  [1m[36mSocialUser Load (1.2ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSocialUser Load (1.2ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mSocialUser Load (1.1ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  Rendered main/home.html.erb within layouts/application (182.5ms)
+Compiled main.css  (1ms)  (pid 1968)
+Compiled application.css  (16ms)  (pid 1968)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:07:26.506824')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 355ms (Views: 344.7ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:07:26 +0400
+Served asset /main.css - 200 OK (26ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:07:26 +0400
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:07:26 +0400
+Served asset /application.css - 304 Not Modified (40ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:07:26 +0400
+Served asset /message.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:07:26 +0400
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:07:27 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:07:27 +0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:07:27 +0400
+Served asset /tripleflap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/vkontakte-small-icon.png" for unknown at 2012-12-07 09:07:27 +0400
+Served asset /vkontakte-small-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 09:07:31 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[35mSocialUser Load (1.4ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mMessage Load (1.6ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  [1m[35mSocialUser Load (1.5ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSocialUser Load (1.3ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mSocialUser Load (1.3ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered main/home.html.erb within layouts/application (260.4ms)
+Compiled main.css  (2ms)  (pid 1968)
+Compiled application.css  (15ms)  (pid 1968)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:07:31.722316')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 462ms (Views: 442.9ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:07:32 +0400
+Served asset /main.css - 200 OK (18ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:07:32 +0400
+Served asset /users.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:07:32 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:07:32 +0400
+Served asset /message.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:07:32 +0400
+Served asset /application.css - 304 Not Modified (267ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:07:32 +0400
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:07:32 +0400
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:07:32 +0400
+Served asset /tripleflap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/vkontakte-small-icon.png" for unknown at 2012-12-07 09:07:33 +0400
+Served asset /vkontakte-small-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 09:08:09 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[36mSocialUser Load (1.9ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mMessage Load (1.5ms)[0m  SELECT "messages".* FROM "messages" 
+  [1m[36mSocialUser Load (1.2ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSocialUser Load (1.2ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mSocialUser Load (1.2ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  Rendered main/home.html.erb within layouts/application (257.3ms)
+Compiled main.css  (2ms)  (pid 1968)
+Compiled application.css  (17ms)  (pid 1968)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:08:09.881712')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 456ms (Views: 444.1ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:08:10 +0400
+Served asset /main.css - 200 OK (18ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:08:10 +0400
+Served asset /application.css - 304 Not Modified (53ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:08:10 +0400
+Served asset /users.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:08:10 +0400
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:08:10 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:08:10 +0400
+Served asset /message.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:08:10 +0400
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:08:10 +0400
+Served asset /tripleflap.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/vkontakte-small-icon.png" for unknown at 2012-12-07 09:08:10 +0400
+Served asset /vkontakte-small-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 09:08:20 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[35mSocialUser Load (0.9ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mMessage Load (1.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  [1m[35mSocialUser Load (0.9ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSocialUser Load (0.9ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mSocialUser Load (0.9ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered main/home.html.erb within layouts/application (180.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:08:20.576000')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 244ms (Views: 235.4ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:08:20 +0400
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:08:20 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:08:20 +0400
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:08:20 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:08:20 +0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:08:21 +0400
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:08:21 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:08:21 +0400
+Served asset /tripleflap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/vkontakte-small-icon.png" for unknown at 2012-12-07 09:08:21 +0400
+Served asset /vkontakte-small-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 09:08:45 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[36mSocialUser Load (1.4ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mMessage Load (2.1ms)[0m  SELECT "messages".* FROM "messages" 
+  [1m[36mSocialUser Load (1.6ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSocialUser Load (1.3ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mSocialUser Load (1.4ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  Rendered main/home.html.erb within layouts/application (435.9ms)
+Compiled main.css  (2ms)  (pid 1968)
+Compiled application.css  (16ms)  (pid 1968)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:08:46.566903')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 634ms (Views: 621.5ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:08:46 +0400
+Served asset /main.css - 200 OK (54ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:08:46 +0400
+Served asset /application.css - 304 Not Modified (47ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:08:46 +0400
+Served asset /message.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:08:47 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:08:47 +0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:08:47 +0400
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:08:47 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:08:47 +0400
+Served asset /tripleflap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/vkontakte-small-icon.png" for unknown at 2012-12-07 09:08:47 +0400
+Served asset /vkontakte-small-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 09:09:28 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[35mSocialUser Load (1.3ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mMessage Load (1.5ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  [1m[35mSocialUser Load (1.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSocialUser Load (1.3ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mSocialUser Load (1.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered main/home.html.erb within layouts/application (236.4ms)
+Compiled main.css  (2ms)  (pid 1968)
+Compiled application.css  (15ms)  (pid 1968)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:09:29.195779')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 420ms (Views: 408.3ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:09:29 +0400
+Served asset /main.css - 200 OK (108ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:09:29 +0400
+Served asset /application.css - 304 Not Modified (48ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:09:29 +0400
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:09:29 +0400
+Served asset /message.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:09:29 +0400
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:09:29 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:09:29 +0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:09:29 +0400
+Served asset /tripleflap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/vkontakte-small-icon.png" for unknown at 2012-12-07 09:09:30 +0400
+Served asset /vkontakte-small-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 09:09:43 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[36mSocialUser Load (1.3ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mMessage Load (1.5ms)[0m  SELECT "messages".* FROM "messages" 
+  [1m[36mSocialUser Load (1.2ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSocialUser Load (1.4ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mSocialUser Load (1.3ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  Rendered main/home.html.erb within layouts/application (444.9ms)
+Compiled main.css  (2ms)  (pid 1968)
+Compiled application.css  (15ms)  (pid 1968)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:09:43.738601')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 644ms (Views: 632.2ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:09:44 +0400
+Served asset /message.css - 304 Not Modified (51ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:09:44 +0400
+Served asset /main.css - 200 OK (21ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:09:44 +0400
+Served asset /application.css - 304 Not Modified (52ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:09:44 +0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:09:44 +0400
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:09:44 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:09:44 +0400
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:09:44 +0400
+Served asset /tripleflap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/vkontakte-small-icon.png" for unknown at 2012-12-07 09:09:44 +0400
+Served asset /vkontakte-small-icon.png - 304 Not Modified (1ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 09:10:01 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[35mSocialUser Load (2.7ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mMessage Load (1.8ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  [1m[35mSocialUser Load (1.4ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSocialUser Load (1.5ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mSocialUser Load (1.5ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered main/home.html.erb within layouts/application (278.2ms)
+Compiled main.css  (2ms)  (pid 1968)
+Compiled application.css  (19ms)  (pid 1968)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:10:02.267785')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 503ms (Views: 489.9ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:10:02 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:10:02 +0400
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:10:02 +0400
+Served asset /jquery.js - 304 Not Modified (61ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:10:02 +0400
+Served asset /main.css - 200 OK (34ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:10:03 +0400
+Served asset /application.css - 304 Not Modified (45ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:10:03 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:10:03 +0400
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:10:03 +0400
+Served asset /tripleflap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/vkontakte-small-icon.png" for unknown at 2012-12-07 09:10:03 +0400
+Served asset /vkontakte-small-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 09:10:51 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[36mSocialUser Load (1.3ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mMessage Load (1.7ms)[0m  SELECT "messages".* FROM "messages" 
+  [1m[36mSocialUser Load (1.3ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSocialUser Load (1.2ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mSocialUser Load (1.3ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  Rendered main/home.html.erb within layouts/application (419.7ms)
+Compiled main.css  (2ms)  (pid 1968)
+Compiled application.css  (15ms)  (pid 1968)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:10:51.751137')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 606ms (Views: 594.7ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:10:51 +0400
+Served asset /main.css - 200 OK (111ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:10:52 +0400
+Served asset /application.css - 304 Not Modified (48ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:10:52 +0400
+Served asset /message.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:10:52 +0400
+Served asset /jquery.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:10:52 +0400
+Served asset /users.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:10:52 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:10:52 +0400
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:10:52 +0400
+Served asset /tripleflap.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/vkontakte-small-icon.png" for unknown at 2012-12-07 09:10:52 +0400
+Served asset /vkontakte-small-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 09:11:45 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[35mSocialUser Load (1.3ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mMessage Load (1.6ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  [1m[35mSocialUser Load (1.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSocialUser Load (1.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mSocialUser Load (1.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered main/home.html.erb within layouts/application (232.8ms)
+Compiled main.css  (2ms)  (pid 1968)
+Compiled application.css  (14ms)  (pid 1968)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:11:45.645414')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 410ms (Views: 398.3ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:11:45 +0400
+Served asset /application.css - 304 Not Modified (119ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:11:46 +0400
+Served asset /message.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:11:46 +0400
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:11:46 +0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:11:46 +0400
+Served asset /main.css - 200 OK (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:11:46 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:11:46 +0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:11:46 +0400
+Served asset /tripleflap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/vkontakte-small-icon.png" for unknown at 2012-12-07 09:11:46 +0400
+Served asset /vkontakte-small-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 09:12:21 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[36mSocialUser Load (1.2ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mMessage Load (1.8ms)[0m  SELECT "messages".* FROM "messages" 
+  [1m[36mSocialUser Load (1.2ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSocialUser Load (1.3ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mSocialUser Load (1.6ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  Rendered main/home.html.erb within layouts/application (441.2ms)
+Compiled main.css  (2ms)  (pid 1968)
+Compiled application.css  (15ms)  (pid 1968)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:12:22.073746')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 633ms (Views: 621.6ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:12:22 +0400
+Served asset /application.css - 304 Not Modified (109ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:12:22 +0400
+Served asset /main.css - 200 OK (14ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:12:22 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:12:22 +0400
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:12:22 +0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:12:22 +0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:12:22 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:12:22 +0400
+Served asset /tripleflap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/vkontakte-small-icon.png" for unknown at 2012-12-07 09:12:23 +0400
+Served asset /vkontakte-small-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/2" for unknown at 2012-12-07 09:12:41 +0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mSocialUser Load (1.3ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mSocialUser Load (1.1ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."user_id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."user_id" = 2[0m
+  [1m[35mMessage Load (1.0ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."social_user_id" = 4
+  [1m[36mMessage Load (0.6ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."social_user_id" = 5[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mSocialUser Load (0.9ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (504.3ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:12:42.492777')[0m
+  [1m[35mMessage Load (1.1ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 611ms (Views: 597.9ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:12:42 +0400
+Served asset /application.css - 304 Not Modified (121ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:12:42 +0400
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:12:43 +0400
+Served asset /message.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:12:43 +0400
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:12:43 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:12:43 +0400
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:12:43 +0400
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:12:43 +0400
+Served asset /tripleflap.js - 304 Not Modified (32ms)
+
+
+Started GET "/assets/facebook-icon-gray.png" for unknown at 2012-12-07 09:12:43 +0400
+Served asset /facebook-icon-gray.png - 200 OK (70ms)
+
+
+Started GET "/assets/google-icon-gray.png" for unknown at 2012-12-07 09:12:43 +0400
+Served asset /google-icon-gray.png - 200 OK (43ms)
+
+
+Started GET "/assets/vkontakte-icon.png" for unknown at 2012-12-07 09:12:43 +0400
+Served asset /vkontakte-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for unknown at 2012-12-07 09:15:50 +0400
+Processing by MainController#home as HTML
+  [1m[36mSocialUser Load (0.9ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 09:15:50.944521')
+  Rendered main/home.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:15:50.995661')
+  [1m[36mMessage Load (1.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 81ms (Views: 75.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:15:51 +0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:15:51 +0400
+Served asset /main.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:15:51 +0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:15:51 +0400
+Served asset /message.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:15:51 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:15:51 +0400
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:15:51 +0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:15:51 +0400
+Served asset /tripleflap.js - 304 Not Modified (1ms)
+
+
+Started GET "/users/2" for unknown at 2012-12-07 09:15:55 +0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mSocialUser Load (1.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mSocialUser Load (1.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."user_id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."user_id" = 2[0m
+  [1m[35mMessage Load (1.0ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."social_user_id" = 4
+  [1m[36mMessage Load (0.6ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."social_user_id" = 5[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mSocialUser Load (0.9ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (108.2ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:15:55.386962')[0m
+  [1m[35mMessage Load (1.1ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 173ms (Views: 160.9ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:15:55 +0400
+Served asset /application.css - 304 Not Modified (33ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:15:56 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:15:56 +0400
+Served asset /main.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:15:56 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:15:56 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:15:56 +0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:15:56 +0400
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:15:56 +0400
+Served asset /tripleflap.js - 304 Not Modified (2ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 09:16:00 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[36mSocialUser Load (1.2ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mMessage Load (1.1ms)[0m  SELECT "messages".* FROM "messages" 
+  [1m[36mSocialUser Load (0.9ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSocialUser Load (1.3ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mSocialUser Load (0.9ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  Rendered main/home.html.erb within layouts/application (184.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:16:00.389800')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 248ms (Views: 239.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:16:00 +0400
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:16:00 +0400
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:16:00 +0400
+Served asset /message.css - 304 Not Modified (44ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:16:00 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:16:00 +0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:16:00 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:16:01 +0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:16:01 +0400
+Served asset /tripleflap.js - 304 Not Modified (2ms)
+
+
+Started GET "/users/3" for unknown at 2012-12-07 09:16:03 +0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mSocialUser Load (1.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mSocialUser Load (1.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."user_id" = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."user_id" = 3[0m
+  [1m[35mMessage Load (0.6ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."social_user_id" = 6
+  [1m[36mSocialUser Load (0.9ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (35.0ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:16:03.291079')
+  [1m[36mMessage Load (1.0ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 101ms (Views: 89.3ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:16:03 +0400
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:16:03 +0400
+Served asset /main.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:16:03 +0400
+Served asset /message.css - 304 Not Modified (29ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:16:03 +0400
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:16:03 +0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:16:03 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:16:03 +0400
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:16:03 +0400
+Served asset /tripleflap.js - 304 Not Modified (1ms)
+
+
+Started GET "/users/2" for unknown at 2012-12-07 09:16:06 +0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mSocialUser Load (0.9ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mSocialUser Load (1.1ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."user_id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."user_id" = 2[0m
+  [1m[35mMessage Load (1.0ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."social_user_id" = 4
+  [1m[36mMessage Load (0.9ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."social_user_id" = 5[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mSocialUser Load (0.9ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (109.1ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:16:06.636981')[0m
+  [1m[35mMessage Load (1.7ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 174ms (Views: 161.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:16:06 +0400
+Served asset /users.css - 304 Not Modified (46ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:16:06 +0400
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:16:07 +0400
+Served asset /main.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:16:07 +0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:16:07 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:16:07 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:16:07 +0400
+Served asset /application.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:16:07 +0400
+Served asset /tripleflap.js - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/2" for unknown at 2012-12-07 09:19:14 +0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mSocialUser Load (1.3ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mSocialUser Load (1.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."user_id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."user_id" = 2
+  [1m[36mMessage Load (1.2ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."social_user_id" = 4[0m
+  [1m[35mMessage Load (1.0ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."social_user_id" = 5
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mSocialUser Load (1.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (130.5ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:19:14.993530')
+  [1m[36mMessage Load (1.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 230ms (Views: 217.1ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:19:15 +0400
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:19:15 +0400
+Served asset /message.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:19:15 +0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:19:15 +0400
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:19:15 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:19:15 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:19:15 +0400
+Served asset /application.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:19:15 +0400
+Served asset /tripleflap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/facebook-icon-gray.png" for unknown at 2012-12-07 09:19:15 +0400
+Served asset /facebook-icon-gray.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vkontakte-icon.png" for unknown at 2012-12-07 09:19:15 +0400
+Served asset /vkontakte-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/google-icon-gray.png" for unknown at 2012-12-07 09:19:15 +0400
+Served asset /google-icon-gray.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vkontakte-small-icon.png" for unknown at 2012-12-07 09:19:15 +0400
+Served asset /vkontakte-small-icon.png - 304 Not Modified (0ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 09:19:17 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[35mSocialUser Load (0.9ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mMessage Load (1.2ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  [1m[35mSocialUser Load (0.9ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSocialUser Load (0.9ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mSocialUser Load (1.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  Rendered main/home.html.erb within layouts/application (182.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:19:18.188977')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 445ms (Views: 436.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:19:18 +0400
+Served asset /main.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:19:18 +0400
+Served asset /application.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:19:18 +0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:19:18 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:19:18 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:19:18 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:19:18 +0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:19:18 +0400
+Served asset /tripleflap.js - 304 Not Modified (2ms)
+
+
+Started GET "/users/3" for unknown at 2012-12-07 09:19:20 +0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mSocialUser Load (0.9ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mSocialUser Load (1.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."user_id" = 3
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."user_id" = 3
+  [1m[36mMessage Load (0.7ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."social_user_id" = 6[0m
+  [1m[35mSocialUser Load (0.9ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (39.5ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:19:20.535407')[0m
+  [1m[35mMessage Load (1.1ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 106ms (Views: 95.4ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:19:20 +0400
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:19:20 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:19:20 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:19:20 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:19:20 +0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:19:20 +0400
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:19:20 +0400
+Served asset /application.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:19:20 +0400
+Served asset /tripleflap.js - 304 Not Modified (2ms)
+
+
+Started GET "/?messages=all" for unknown at 2012-12-07 09:19:27 +0400
+Processing by MainController#home as HTML
+  Parameters: {"messages"=>"all"}
+  [1m[36mSocialUser Load (0.9ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mMessage Load (1.1ms)[0m  SELECT "messages".* FROM "messages" 
+  [1m[36mSocialUser Load (0.9ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 6 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSocialUser Load (1.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mSocialUser Load (0.9ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  Rendered main/home.html.erb within layouts/application (179.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-06 20:00:00.000000' AND '2012-12-07 05:19:27.895569')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 245ms (Views: 236.5ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/main.css?body=1" for unknown at 2012-12-07 09:19:28 +0400
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for unknown at 2012-12-07 09:19:28 +0400
+Served asset /application.css - 304 Not Modified (53ms)
+
+
+Started GET "/assets/users.css?body=1" for unknown at 2012-12-07 09:19:28 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for unknown at 2012-12-07 09:19:28 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for unknown at 2012-12-07 09:19:28 +0400
+Served asset /application.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/jquery.js?body=1" for unknown at 2012-12-07 09:19:28 +0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/message.css?body=1" for unknown at 2012-12-07 09:19:28 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for unknown at 2012-12-07 09:19:28 +0400
+Served asset /tripleflap.js - 304 Not Modified (1ms)
