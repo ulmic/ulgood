@@ -6,6 +6,7 @@
         .name_line {
             font-size: 35px;
             font-family: "micfont";
+            z-index: 5;
         }
 
         /* Date of posts */

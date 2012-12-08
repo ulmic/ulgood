@@ -10,8 +10,8 @@ smile.png: smile-9f24814fafbac09251420a4250e0f4f5.png
 twitter-icon-gray.png: twitter-icon-gray-edc90dd565bbfb50a84f751a5d0bce49.png
 twitter-icon.png: twitter-icon-7f36944cc65825cc5d5827f5c356a71e.png
 twitter-small-icon.png: twitter-small-icon-a04f9f3e3a3738e994f2b086766d5f67.png
-vk-icon-gray.png: vk-icon-gray-5aecb06a75af58f0a724785b0d3812c1.png
-vk-icon.png: vk-icon-fb98faf272a21d47bfdad3d9acf8eb9d.png
-vk-small-icon.png: vk-small-icon-88b71dabf7ed395a33d9124d4012a105.png
-application.js: application-dc57090d528e45175e6ae68e14955ad6.js
-application.css: application-98951ca745c7c63f79ba64bb915ed835.css
+vkontakte-icon-gray.png: vkontakte-icon-gray-5aecb06a75af58f0a724785b0d3812c1.png
+vkontakte-icon.png: vkontakte-icon-fb98faf272a21d47bfdad3d9acf8eb9d.png
+vkontakte-small-icon.png: vkontakte-small-icon-88b71dabf7ed395a33d9124d4012a105.png
+application.js: application-ee10c4fad9e29f5eb2137111957c799c.js
+application.css: application-45691189e4b747ba5cf18a03df3cbca8.css

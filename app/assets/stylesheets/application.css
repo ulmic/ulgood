@@ -1,5 +1,5 @@
 /*
- *= require_self
+ = require_self
  *= require_tree .
 */
 
@@ -15,7 +15,9 @@
 
 
 /* Header */
-
+    header {
+        position: fixed;
+    }
     /* Left top MIC logo */
     .miclogo {
         position: absolute;
@@ -73,53 +75,14 @@
 
 /* Main for all pages */
 
-    /* Main div in the center */
-    .content {
-        font-family: micfont;
-        font-size: 25px;
-        position: relative;
-        left: 300px;
-        top: 120px;
-    }
 
-    /* Links in the Main div */
-    body a {
-        color: black;
-        text-decoration: none;
-    }
 
-    /* Posts counters */
 
-        /* Counter div */
-        .counters {
-            position:absolute;
-            top: 140px;
-            right: 20px;
-            font-family: "micfont";
-            font-size: 20px;
-        }
-
-        /* Digits in counters */
-        .counter_number {
-            font-family: "micfont";
-            font-size: 60px;
-            color: #AAA;
-            text-align: center;
-        }
-        .counter_number a{
-            color: #AAA;
-        }
-
-        .simple_counter {
-            display: inline-block;
-            width: 120px;
-        }
-
-    /* end Posts counters */
 
     /* Footer */
     footer {
-        position:absolute;
+        z-index:5;
+        position:fixed;
         bottom: 0%;
         width: 99%;
         font-family: "micfont";
