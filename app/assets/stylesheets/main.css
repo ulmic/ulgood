@@ -112,7 +112,7 @@ header {
 
 /* Main div in the center */
 .content {
-    z-index: 8;
+    z-index: 1;
     font-family: micfont;
     font-size: 25px;
     position: relative;
