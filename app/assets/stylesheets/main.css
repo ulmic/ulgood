@@ -57,6 +57,11 @@ header {
     font-family: "micfont";
 }
 
+.post_form input[type=submit]:disabled {
+    color:#aaa;
+    background-color: #eee;
+}
+
 /* end New post form */
     /* Home action */
 

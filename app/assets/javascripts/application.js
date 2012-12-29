@@ -35,6 +35,11 @@ function counter(el)
     var wrapper = document.createElement('DIV');
     wrapper.innerHTML = el.value;
     var len = (wrapper.textContent || wrapper.innerText).length;
+    if (len < 10) {
+        document.getElementById('post').disabled=true;
+    } else {
+        document.getElementById('post').disabled=false;
+    }
     document.getElementById('count').innerHTML = 100-len;
 }
 
