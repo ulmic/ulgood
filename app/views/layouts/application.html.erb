@@ -18,6 +18,9 @@
         <div class = "logout_button">
           <%= link_to "Выход", destroy_social_user_session_path, :method => :delete %>
         </div>
+        <div class = "logout_button">
+          <%= link_to "Новые дела (#{Message.where(:checked => 0).count})", :controller => "admin", :action => "new_posts" if current_social_user.user.admin?%>
+        </div>
         <div class = "user_name">
           Здравствуйте,
           <%= link_to current_social_user.user.name, :controller => "users", :action => "show", :id => current_social_user.user_id %>

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class DeviseCreateSocialUsers < ActiveRecord::Migration
   def change
     create_table(:social_users) do |t|

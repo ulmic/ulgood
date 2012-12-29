@@ -152,6 +152,5 @@ DEPENDENCIES
   omniauth-vkontakte
   proxylocal
   rails (= 3.2.8)
-  rake (= 10.0.3)
   sqlite3
   uglifier

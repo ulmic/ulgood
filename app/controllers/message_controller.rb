@@ -11,6 +11,7 @@ class MessageController < ApplicationController
       message = Message.new
       message.social_user_id = current_social_user.id
       message.message = params[:message].values[0].to_message
+      message.checked=0
       message.created_at = Time.now
       message.save!
 
@@ -31,7 +32,6 @@ end
 
 class String
   def to_message
-    self << "."   if self.last != "."
     self[0] = self[0].downcase
     self
   end
