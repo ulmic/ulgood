@@ -38,7 +38,7 @@
         <br>
         <%= f.text_area :message, :onkeypress => "counter(this);", :onkeyup => "counter(this);", :onchange => "counter(this);", :maxlength => 100, :cols => 40, :rows => 3, :required => ""%>
         <br>
-        <span id='count' style= "position:relative; float:right; right:150px; font-size: 20px; font-weight: bold;">100</span>
+        <span id='count'>100</span>
         <%= f.submit :value => "Рассказать!", :id => "post", :disabled => "" %>
     <% end %>
   </div>
@@ -52,6 +52,9 @@
 <footer>
   <%= image_tag ("smile.png"), :class => "smile" %>
   2012, Ulgood.ru, УОМОО "Молодёжный Инициативный Центр", ulmic.ru
+  <span class="inline">
+    <%= link_to "О проекте", :controller => "main", :action => "about" %>
+  </span>
   <%= link_to "Нашли ошибку?", "mailto:ulgood73@gmail.com" %>
 <script type='text/javascript' charset='utf-8'>
     TwitterBird();

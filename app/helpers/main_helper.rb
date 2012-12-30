@@ -12,7 +12,11 @@ module MainHelper
     end
 
     if messages.count == 0
-      posts = "Стань сегодня первым!"
+      if messages_class != "all"
+        posts = "Стань сегодня первым!"
+      else
+        posts = "Добрых дел ещё нет. Расскажи о своём!"
+      end
     else
       messages.each do |m|
         #TODO: Code repeat!

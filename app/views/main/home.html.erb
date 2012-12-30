@@ -1,6 +1,11 @@
 <% if social_user_signed_in? %>
-    <div class="top_alpha_block"></div> 
-    <span style = "font-size:40px; color:#aaa;">СЕГОДНЯ:</span>
+    <div class="top_alpha_block"></div>
+    <% if params[:messages]=="all" %>
+        <span style = "font-size:40px; color:#aaa;">ДОБРЫЕ ДЕЛА ЗА ВСЁ ВРЕМЯ:</span>
+    <% else %>
+        <span style = "font-size:40px; color:#aaa;">СЕГОДНЯ:</span>
+    <% end %>
+
     <br>
     <%=raw posts params[:messages] %>
     <br>
@@ -27,6 +32,6 @@
     Для входа щёлкните по иконке социальной сети, в которой Вы зарегистрированы.<br><br>
     Если Вы уже заходили на Ulgood.ru, с данного аккаунта, скорее всего вход произойдёт автоматически.<br><br>
     В ином случае откроется окно, в котором Вам следует войти в учётную запись данной социальной сети, и подтвердить вход на Ulgood.ru.<br><br>
-    Если в данном списке нет социальных сетей, в которых Вы зарегистрированы, либо возникли другие проблемы с авторизацией на сайте - сообщите об этом разработчику сайта по адресу: <a href="mailto:aelaau@gmail.com" style = "color:#f9bd27; font-weight: bold;">aelaau@gmail.com</a>
+    Если в данном списке нет социальных сетей, в которых Вы зарегистрированы, либо возникли другие проблемы с авторизацией на сайте - сообщите об этом разработчику сайта <a href="mailto:ulgood73@gmail.com" style = "color:#f9bd27; font-weight: bold;">здесь</a>.
     </div>
 <% end %>
