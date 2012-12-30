@@ -1,6 +1,11 @@
 <% if social_user_signed_in? %>
-    <div class="top_alpha_block"></div> 
-    <span style = "font-size:40px; color:#aaa;">СЕГОДНЯ:</span>
+    <div class="top_alpha_block"></div>
+    <% if params[:messages]=="all" %>
+        <span style = "font-size:40px; color:#aaa;">ДОБРЫЕ ДЕЛА ЗА ВСЁ ВРЕМЯ:</span>
+    <% else %>
+        <span style = "font-size:40px; color:#aaa;">СЕГОДНЯ:</span>
+    <% end %>
+
     <br>
     <%=raw posts params[:messages] %>
     <br>
