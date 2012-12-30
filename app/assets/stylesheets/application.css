@@ -21,8 +21,8 @@
     /* Left top MIC logo */
     .miclogo {
         position: absolute;
-        left: 80px;
-        top: 80px;
+        left: 4%;
+        top: 50px;
     }
 
     /* Head text: "Ни дня без добрых дел!" */
@@ -30,8 +30,8 @@
         font-family: micfont;
         position: absolute;
         font-size: 60px;
-        top: 60px;
-        left: 315px;
+        top: 30px;
+        left: 19%;
     }
 
     /* Top user panel */
@@ -47,7 +47,7 @@
         .logout_button {
             float: right;
             margin-left: 10px;
-            margin-right: 10px;
+            margin-right: 20px;
             border-bottom: 1px solid #F9BD27;
             border-radius: 5px;
         }
@@ -69,6 +69,7 @@
         position: absolute;
         bottom: 20px;
         right: 50px;
+        z-index:0;
     }
 /* end Header */
 

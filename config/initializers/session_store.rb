@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Be sure to restart your server when you modify this file.
 
 UlgoodRv5::Application.config.session_store :cookie_store, key: '_ulgood_rv5_session'

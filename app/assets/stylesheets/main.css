@@ -15,9 +15,15 @@ header {
         font-family: "micfont";
         width:625px;
         position: relative;
+<<<<<<< HEAD
         top: 110px;
         left: 320px;
         z-index:10;
+=======
+        top: 83px;
+        left: 19%;
+
+>>>>>>> master
     }
 
 /* Message text area */
@@ -48,7 +54,7 @@ header {
 /* Submit button */
 .post_form input[type="submit"] {
     position: absolute;
-    top:52px;
+    top:55px;
     right: 0%;
     height: 58px;;
     border-top-left-radius: 0px;
@@ -60,6 +66,11 @@ header {
     color: #FFF;
     font-size: 25px;
     font-family: "micfont";
+}
+
+.post_form input[type=submit]:disabled {
+    color:#aaa;
+    background-color: #eee;
 }
 
 /* end New post form */
@@ -117,12 +128,12 @@ header {
 
 /* Main div in the center */
 .content {
-    z-index: 8;
+    z-index: 1;
     font-family: micfont;
     font-size: 25px;
     position: relative;
-    left: 320px;
-    top: 250px;
+    left: 19%;
+    top: 230px;
     width:50%;
 }
 
@@ -136,9 +147,13 @@ body a {
 
 /* Counter div */
 .counters {
+<<<<<<< HEAD
     z-index: 10;
+=======
+    z-index:6;
+>>>>>>> master
     position: fixed;
-    top: 140px;
+    top: 90px;
     right: 20px;
     font-family: "micfont";
     font-size: 20px;
@@ -157,15 +172,17 @@ body a {
 
 .simple_counter {
     display: inline-block;
+    text-align: center;
     width: 120px;
 }
+
 
 /* end Posts counters */
 .top_alpha_block {
     z-index: 1;
     position:fixed;
     top: 0%;
-    height: 260px;
+    height: 240px;
     width:100%;
     background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 90%, rgba(255,255,255,0) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(90%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
@@ -221,6 +238,7 @@ body a {
     z-index: 7;
     background-color: rgba(0,0,0,0.5);
 }
+<<<<<<< HEAD
 
 #count {
     position:relative;
@@ -256,3 +274,5 @@ footer a {
     bottom: 20px;
     right: 50px;
 }
+=======
+>>>>>>> master

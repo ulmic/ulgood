@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 UlgoodRv5::Application.routes.draw do
 
   devise_for :social_users, :controllers => { :omniauth_callbacks => "social_users/omniauth_callbacks" }
@@ -12,6 +13,8 @@ UlgoodRv5::Application.routes.draw do
   match "messages/delete" => "message#delete"
   match "users/delete" => "users#delete"
   match "users/add" => "users#add"
+  match "admin/new_posts" => "admin#new_posts"
+  match "admin/allow" => "admin#allow"
 
   resources :users, :only => [:show]
 

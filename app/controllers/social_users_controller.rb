@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class SocialUsersController < ApplicationController
   # GET /social_users/new
   # GET /social_users/new.json
