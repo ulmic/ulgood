@@ -15,6 +15,7 @@ UlgoodRv5::Application.routes.draw do
   match "users/add" => "users#add"
   match "admin/new_posts" => "admin#new_posts"
   match "admin/allow" => "admin#allow"
+  match "about" => "main#about"
 
   resources :users, :only => [:show]
 

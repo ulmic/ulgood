@@ -51735,3 +51735,789 @@ Served asset /application.js - 304 Not Modified (3ms)
 
 Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 19:37:41 +0400
 Served asset /tripleflap.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-30 19:54:08 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (17.4ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 1 LIMIT 1
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 19:54:08.394243') AND (checked!=0)[0m
+  Rendered main/home.html.erb within layouts/application (25.4ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE "messages"."checked" = 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 15:54:08.444262')
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 95ms (Views: 74.9ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-30 19:54:08 +0400
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2012-12-30 19:54:08 +0400
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-30 19:54:08 +0400
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/message.css?body=1" for 127.0.0.1 at 2012-12-30 19:54:08 +0400
+Served asset /message.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-30 19:54:08 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-30 19:54:08 +0400
+Served asset /jquery.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-30 19:54:08 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (38ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-30 19:54:08 +0400
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 19:54:08 +0400
+Served asset /tripleflap.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-30 19:58:36 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (0.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 19:58:36.704609') AND (checked!=0)[0m
+  Rendered main/home.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE "messages"."checked" = 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 15:58:36.725876')
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-30 19:58:36 +0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2012-12-30 19:58:36 +0400
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-30 19:58:36 +0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/message.css?body=1" for 127.0.0.1 at 2012-12-30 19:58:36 +0400
+Served asset /message.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-30 19:58:36 +0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-30 19:58:36 +0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-30 19:58:37 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-30 19:58:37 +0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 19:58:37 +0400
+Served asset /tripleflap.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2012-12-30 20:06:36 +0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mSocialUser Load (0.7ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSocialUser Load (0.2ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."user_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "social_users".* FROM "social_users" WHERE "social_users"."user_id" = 1[0m
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."social_user_id" = 1
+  Rendered users/show.html.erb within layouts/application (13.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE "messages"."checked" = 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 16:06:36.716999')
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 40ms (Views: 36.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-30 20:06:36 +0400
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2012-12-30 20:06:36 +0400
+Served asset /admin.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-30 20:06:36 +0400
+Served asset /main.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/message.css?body=1" for 127.0.0.1 at 2012-12-30 20:06:36 +0400
+Served asset /message.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-30 20:06:36 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-30 20:06:36 +0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-30 20:06:37 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-30 20:06:37 +0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 20:06:37 +0400
+Served asset /tripleflap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebook-icon-gray.png" for 127.0.0.1 at 2012-12-30 20:06:37 +0400
+Served asset /facebook-icon-gray.png - 304 Not Modified (11ms)
+
+
+Started GET "/assets/vkontakte-icon-gray.png" for 127.0.0.1 at 2012-12-30 20:06:37 +0400
+Served asset /vkontakte-icon-gray.png - 304 Not Modified (15ms)
+
+
+Started GET "/assets/google-icon-gray.png" for 127.0.0.1 at 2012-12-30 20:06:37 +0400
+Served asset /google-icon-gray.png - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-30 20:06:38 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (0.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 20:06:38.757831') AND (checked!=0)[0m
+  Rendered main/home.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE "messages"."checked" = 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 16:06:38.769284')
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-30 20:06:38 +0400
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2012-12-30 20:06:39 +0400
+Served asset /admin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-30 20:06:39 +0400
+Served asset /main.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-30 20:06:39 +0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/message.css?body=1" for 127.0.0.1 at 2012-12-30 20:06:39 +0400
+Served asset /message.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-30 20:06:39 +0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-30 20:06:39 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-30 20:06:39 +0400
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 20:06:39 +0400
+Served asset /tripleflap.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-30 20:09:18 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (0.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 20:09:18.987332') AND (checked!=0)[0m
+  Rendered main/home.html.erb within layouts/application (46.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE "messages"."checked" = 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 16:09:19.042395')
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 104ms (Views: 89.2ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-30 20:09:19 +0400
+Served asset /application.css - 304 Not Modified (51ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-30 20:09:19 +0400
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2012-12-30 20:09:19 +0400
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/message.css?body=1" for 127.0.0.1 at 2012-12-30 20:09:19 +0400
+Served asset /message.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-30 20:09:19 +0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-30 20:09:19 +0400
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-30 20:09:19 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-30 20:09:19 +0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 20:09:19 +0400
+Served asset /tripleflap.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-30 20:09:28 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (0.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 20:09:28.618612') AND (checked!=0)[0m
+  Rendered main/home.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE "messages"."checked" = 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 16:09:28.633201')
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-30 20:09:28 +0400
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2012-12-30 20:09:28 +0400
+Served asset /admin.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-30 20:09:28 +0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-30 20:09:28 +0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/message.css?body=1" for 127.0.0.1 at 2012-12-30 20:09:28 +0400
+Served asset /message.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-30 20:09:28 +0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-30 20:09:28 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-30 20:09:28 +0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 20:09:28 +0400
+Served asset /tripleflap.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-30 20:09:58 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (0.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 20:09:58.294563') AND (checked!=0)[0m
+  Rendered main/home.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE "messages"."checked" = 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 16:09:58.308999')
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2012-12-30 20:09:58 +0400
+Served asset /admin.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-30 20:09:58 +0400
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-30 20:09:58 +0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/message.css?body=1" for 127.0.0.1 at 2012-12-30 20:09:58 +0400
+Served asset /message.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-30 20:09:58 +0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-30 20:09:58 +0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-30 20:09:58 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-30 20:09:58 +0400
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 20:09:58 +0400
+Served asset /tripleflap.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-30 20:10:25 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (0.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 20:10:25.212263') AND (checked!=0)[0m
+  Rendered main/home.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE "messages"."checked" = 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 16:10:25.226771')
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-30 20:10:25 +0400
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2012-12-30 20:10:25 +0400
+Served asset /admin.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-30 20:10:25 +0400
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-30 20:10:25 +0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/message.css?body=1" for 127.0.0.1 at 2012-12-30 20:10:25 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-30 20:10:25 +0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-30 20:10:25 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 20:10:25 +0400
+Served asset /tripleflap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-30 20:10:25 +0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-30 20:10:37 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (0.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 20:10:37.580297') AND (checked!=0)[0m
+  Rendered main/home.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE "messages"."checked" = 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 16:10:37.634799')
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-30 20:10:37 +0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2012-12-30 20:10:37 +0400
+Served asset /admin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/message.css?body=1" for 127.0.0.1 at 2012-12-30 20:10:37 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-30 20:10:37 +0400
+Served asset /main.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-30 20:10:37 +0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-30 20:10:37 +0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-30 20:10:37 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-30 20:10:37 +0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 20:10:37 +0400
+Served asset /tripleflap.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-30 20:11:05 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (0.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 20:11:05.409063') AND (checked!=0)[0m
+  Rendered main/home.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE "messages"."checked" = 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 16:11:05.423604')
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-30 20:11:05 +0400
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-30 20:11:05 +0400
+Served asset /main.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2012-12-30 20:11:05 +0400
+Served asset /admin.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/message.css?body=1" for 127.0.0.1 at 2012-12-30 20:11:05 +0400
+Served asset /message.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-30 20:11:05 +0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-30 20:11:05 +0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-30 20:11:05 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-30 20:11:05 +0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 20:11:05 +0400
+Served asset /tripleflap.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-30 20:11:54 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (0.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 20:11:54.417914') AND (checked!=0)[0m
+  Rendered main/home.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE "messages"."checked" = 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 16:11:54.432402')
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-30 20:11:54 +0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/message.css?body=1" for 127.0.0.1 at 2012-12-30 20:11:54 +0400
+Served asset /message.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-30 20:11:54 +0400
+Served asset /main.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2012-12-30 20:11:54 +0400
+Served asset /admin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-30 20:11:54 +0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-30 20:11:54 +0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-30 20:11:54 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-30 20:11:54 +0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 20:11:54 +0400
+Served asset /tripleflap.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-30 20:12:30 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (0.3ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 20:12:30.789214') AND (checked!=0)[0m
+  Rendered main/home.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE "messages"."checked" = 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 16:12:30.803918')
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-30 20:12:30 +0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2012-12-30 20:12:30 +0400
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-30 20:12:31 +0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/message.css?body=1" for 127.0.0.1 at 2012-12-30 20:12:31 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-30 20:12:31 +0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-30 20:12:31 +0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-30 20:12:31 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-30 20:12:31 +0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 20:12:31 +0400
+Served asset /tripleflap.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-30 20:12:56 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (0.3ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 20:12:56.783289') AND (checked!=0)[0m
+  Rendered main/home.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE "messages"."checked" = 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 16:12:56.798242')
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-30 20:12:57 +0400
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2012-12-30 20:12:57 +0400
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-30 20:12:57 +0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-30 20:12:57 +0400
+Served asset /users.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/message.css?body=1" for 127.0.0.1 at 2012-12-30 20:12:57 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-30 20:12:57 +0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-30 20:12:57 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-30 20:12:57 +0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 20:12:57 +0400
+Served asset /tripleflap.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-30 20:13:55 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (0.5ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 20:13:55.781909') AND (checked!=0)[0m
+  Rendered main/home.html.erb within layouts/application (3.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE "messages"."checked" = 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 16:13:55.812782')
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-30 20:13:55 +0400
+Served asset /jquery.js - 304 Not Modified (70ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-30 20:13:56 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-30 20:13:56 +0400
+Served asset /application.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-30 20:13:56 +0400
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 20:13:56 +0400
+Served asset /tripleflap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2012-12-30 20:13:56 +0400
+Served asset /admin.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/message.css?body=1" for 127.0.0.1 at 2012-12-30 20:13:56 +0400
+Served asset /message.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-30 20:13:56 +0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-30 20:13:56 +0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-30 20:14:45 +0400
+Processing by MainController#home as HTML
+  [1m[35mSocialUser Load (0.2ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 20:14:45.119098') AND (checked!=0)[0m
+  Rendered main/home.html.erb within layouts/application (2.5ms)
+Compiled main.css  (1ms)  (pid 19306)
+Compiled application.css  (7ms)  (pid 19306)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE "messages"."checked" = 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 16:14:45.255218')
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+Completed 200 OK in 142ms (Views: 141.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-30 20:14:45 +0400
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/message.css?body=1" for 127.0.0.1 at 2012-12-30 20:14:45 +0400
+Served asset /message.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-30 20:14:45 +0400
+Served asset /main.css - 200 OK (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-30 20:14:45 +0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2012-12-30 20:14:45 +0400
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-30 20:14:45 +0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-30 20:14:45 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-30 20:14:45 +0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 20:14:45 +0400
+Served asset /tripleflap.js - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2012-12-30 20:14:49 +0400
+Processing by MainController#about as HTML
+  Rendered main/about.html.erb within layouts/application (0.5ms)
+  [1m[35mSocialUser Load (0.3ms)[0m  SELECT "social_users".* FROM "social_users" WHERE "social_users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE "messages"."checked" = 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE ("messages"."created_at" BETWEEN '2012-12-29 20:00:00.000000' AND '2012-12-30 16:14:49.571913')[0m
+  [1m[35mMessage Load (0.1ms)[0m  SELECT "messages".* FROM "messages" 
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-30 20:14:49 +0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2012-12-30 20:14:49 +0400
+Served asset /admin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-30 20:14:49 +0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-30 20:14:49 +0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/message.css?body=1" for 127.0.0.1 at 2012-12-30 20:14:49 +0400
+Served asset /message.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2012-12-30 20:14:49 +0400
+Served asset /main.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-30 20:14:49 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-30 20:14:49 +0400
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/tripleflap.js?body=1" for 127.0.0.1 at 2012-12-30 20:14:49 +0400
+Served asset /tripleflap.js - 304 Not Modified (0ms)

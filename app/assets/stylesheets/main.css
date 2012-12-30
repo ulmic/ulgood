@@ -254,6 +254,9 @@ footer a {
     float:right;
     color: #F9BD27;
 }
+.inline a {
+    float:none;
+}
 /* end Footer */
 
 /* end */
