@@ -3,7 +3,7 @@ class MainController < ApplicationController
   def home
     if !cookies[:redirect].blank?
       path = cookies[:redirect]
-      cookies[:redirect]=""
+      cookies.delete :redirect
       redirect_to path
     end
     if !cookies[:provider].blank?
