@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class UsersController < ApplicationController
-
+  before_filter :authenticate_social_user!
   # GET /users/1
   # GET /users/1.json
   def show
@@ -24,6 +24,10 @@ class UsersController < ApplicationController
     cookies[:provider] = params[:provider]
     cookies[:user] = current_social_user.user.id
     redirect_to destroy_social_user_session_path
+  end
+
+  def me
+    redirect_to :controller => "users", :action => "show", :id => current_social_user.user.id
   end
 
 end

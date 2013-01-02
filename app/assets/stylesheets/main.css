@@ -120,7 +120,7 @@ header {
 
 
 /* Main div in the center */
-.content {
+#content {
     z-index: 1;
     font-family: micfont;
     font-size: 25px;
@@ -241,7 +241,7 @@ body a {
 
 /* Footer */
 footer {
-    z-index:50;
+    z-index:1;
     position:fixed;
     bottom: 0%;
     width: 99%;
