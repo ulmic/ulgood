@@ -18,7 +18,7 @@ module MainHelper
         posts = "Добрых дел ещё нет. Расскажи о своём!"
       end
     else
-      messages.each do |m|
+      messages.reverse.each do |m|
         #TODO: Code repeat!
         posts += %{
 					<div class = "today_list_item" #{'onclick = "show_full(this);" style="cursor:pointer;"' if m.message.length > 50 } onmouseover = "showSocialButtons(this);" onmouseout = "hideSocialButtons(this)">

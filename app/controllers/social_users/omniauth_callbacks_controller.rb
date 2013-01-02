@@ -11,6 +11,7 @@ class SocialUsers::OmniauthCallbacksController < ApplicationController
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Facebook"
       cookies.delete(:user)
       cookies.delete(:provider)
+      cookies[:redirect] = "/me"
       sign_in_and_redirect user, :event => :authentication
     else
       flash[:notice] = "authentication error"
@@ -24,6 +25,7 @@ class SocialUsers::OmniauthCallbacksController < ApplicationController
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Vkontakte"
       cookies.delete(:user)
       cookies.delete(:provider)
+      cookies[:redirect] = "/me"
       sign_in_and_redirect user, :event => :authentication
     else
       flash[:notice] = "authentication error"
@@ -37,6 +39,7 @@ class SocialUsers::OmniauthCallbacksController < ApplicationController
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Twitter"
       cookies.delete(:user)
       cookies.delete(:provider)
+      cookies[:redirect] = "/me"
       sign_in_and_redirect user, :event => :authentication
     else
       flash[:notice] = "authentication error"
@@ -51,6 +54,7 @@ class SocialUsers::OmniauthCallbacksController < ApplicationController
       cookies.delete(:user)
       cookies.delete(:provider)
       sign_in_and_redirect user, :event => :authentication
+      cookies[:redirect] = "/me"
     else
       flash[:notice] = "authentication error"
       redirect_to root_path

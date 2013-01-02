@@ -43,4 +43,8 @@ class SocialUsersController < ApplicationController
     redirect_to social_user_omniauth_authorize_path(params[:provider].to_sym)
   end
 
+  def sign_in
+    redirect_to root_path
+  end
+
 end
