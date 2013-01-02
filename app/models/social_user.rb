@@ -17,7 +17,7 @@ class SocialUser < ActiveRecord::Base
   def self.find_for_facebook_oauth access_token, current_cookies
 
     if user = SocialUser.where(:url => access_token.info.urls.Facebook).first
-      user
+      { :user => user }
     else
       if current_cookies[:user].nil? || current_cookies[:user].blank?
         new_user = User.create!(:name => access_token.info.name)
@@ -26,13 +26,14 @@ class SocialUser < ActiveRecord::Base
           new_user = current_cookies[:user]
         end
       end
-      SocialUser.create!(:provider => access_token.provider, :url => access_token.info.urls.Facebook, :username => access_token.extra.raw_info.name, :nickname => access_token.extra.raw_info.username, :email => access_token.extra.raw_info.email, :password => Devise.friendly_token[0,20], :user_id => new_user)
+      user = SocialUser.create!(:provider => access_token.provider, :url => access_token.info.urls.Facebook, :username => access_token.extra.raw_info.name, :nickname => access_token.extra.raw_info.username, :email => access_token.extra.raw_info.email, :password => Devise.friendly_token[0,20], :user_id => new_user)
+      { :user => user, :new => "true" }
     end
   end
 
   def self.find_for_vkontakte_oauth access_token, current_cookies
     if user = SocialUser.where(:url => access_token.info.urls.Vkontakte).first
-      user
+      { :user => user }
     else
       if current_cookies[:user].nil? || current_cookies[:user].blank?
         new_user = User.create!(:name => access_token.info.name)
@@ -41,13 +42,14 @@ class SocialUser < ActiveRecord::Base
           new_user = current_cookies[:user]
         end
       end
-      SocialUser.create!(:provider => access_token.provider, :url => access_token.info.urls.Vkontakte, :username => access_token.info.name, :nickname => access_token.extra.raw_info.domain, :email => access_token.extra.raw_info.domain+'@vk.com', :password => Devise.friendly_token[0,20], :user_id => new_user)
+      user = SocialUser.create!(:provider => access_token.provider, :url => access_token.info.urls.Vkontakte, :username => access_token.info.name, :nickname => access_token.extra.raw_info.domain, :email => access_token.extra.raw_info.domain+'@vk.com', :password => Devise.friendly_token[0,20], :user_id => new_user)
+      { :user => user, :new => "true" }
     end
   end
 
   def self.find_for_twitter_oauth access_token, current_cookies
     if user = SocialUser.where(:url => access_token.info.urls.Twitter).first
-      user
+      { :user => user }
     else
       if current_cookies[:user].nil? || current_cookies[:user].blank?
         new_user = User.create!(:name => access_token.info.name)
@@ -56,13 +58,14 @@ class SocialUser < ActiveRecord::Base
           new_user = current_cookies[:user]
         end
       end
-      SocialUser.create!(:provider => access_token.provider, :url => access_token.info.urls.Twitter, :username => access_token.info.name, :nickname => access_token.info.nickname, :email => access_token.info.nickname+"@twitter.com", :password => Devise.friendly_token[0,20], :user_id => new_user)
+      user = SocialUser.create!(:provider => access_token.provider, :url => access_token.info.urls.Twitter, :username => access_token.info.name, :nickname => access_token.info.nickname, :email => access_token.info.nickname+"@twitter.com", :password => Devise.friendly_token[0,20], :user_id => new_user)
+      { :user => user, :new => "true" }
     end
   end
 
   def self.find_for_google_oauth access_token, current_cookies
     if user = SocialUser.where(:email => access_token.info.email).first
-      user
+      { :user => user }
     else
       if current_cookies[:user].nil? || current_cookies[:user].blank?
         new_user = User.create!(:name => access_token.info.name)
@@ -71,7 +74,8 @@ class SocialUser < ActiveRecord::Base
           new_user = current_cookies[:user]
         end
       end
-      SocialUser.create!(:provider => access_token.provider, :url => "mailto:" + access_token.info.uid, :username => access_token.info.name, :nickname => access_token.info.name, :email => access_token.info.email, :password => Devise.friendly_token[0,20], :user_id => new_user)
+      user =  SocialUser.create!(:provider => access_token.provider, :url => "mailto:" + access_token.info.uid, :username => access_token.info.name, :nickname => access_token.info.name, :email => access_token.info.email, :password => Devise.friendly_token[0,20], :user_id => new_user)
+      { :user => user, :new => "true" }
     end
   end
 
