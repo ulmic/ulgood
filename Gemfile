@@ -9,7 +9,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem 'omniauth-vkontakte', '1.3.0'
+gem 'omniauth-vkontakte', '1.2.0'
 gem 'omniauth-twitter'
 gem "omniauth-google"
 gem 'magic_encoding'
