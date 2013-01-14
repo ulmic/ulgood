@@ -1,0 +1,4 @@
+%header
+  =render "layouts/user_panel" if social_account_signed_in?
+  = link_to(image_tag("mic_logo.png", :alt => "ulmic.ru"), "http://ulmic.ru", :id => "miclogo")
+  = link_to("НИ ДНЯ БЕЗ ДОБРЫХ ДЕЛ!", root_url, :id => "header_text", :style => @head_style)

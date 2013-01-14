@@ -1,0 +1,15 @@
+=render "layouts/header"
+
+#main{ :style => @main_style }
+  - if social_account_signed_in?
+    =raw counters
+    =render "post_form"
+    =raw posts (params[:messages])
+  - else
+    %br
+    <span style="color:#f9bd27;">
+    %b Доброе
+    </span>
+    время суток!
+    %br
+    Пожалуйста, зарегистрируйтесь через одну из социальных сетей:
