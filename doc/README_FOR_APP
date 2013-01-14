@@ -1,0 +1,247 @@
+Building this application:
+
+1. Create new Rails app with sqlite and jquery preconfigured.
+
+    rails new ulgood
+
+2. Create Gemfile:
+
+    <Gemfile>
+    + source 'https://rubygems.org'
+    +
+    + gem 'rails', '3.2.8'
+    +
+    + group :development do
+    +     gem 'sqlite3'
+    + end
+    +
+    + group :production do
+    +     gem 'mysql2'
+    <for pg>+     #gem 'pg'
+    + end
+    +
+    + group :assets do
+    +     gem 'sass-rails'
+    +     gem 'coffee-rails'
+    + end
+    +
+    + gem 'jquery-rails'
+    + gem 'haml-rails'
+    + gem 'devise'
+    + gem 'omniauth'
+    + gem 'omniauth-facebook'
+    + gem 'omniauth-vkontakte', '1.0.6'
+    + gem 'omniauth-twitter'
+    + gem "omniauth-google"
+
+3. Setup '/config/database.yml':
+
+    </config/database.yml>
+    + development:
+    +   adapter: sqlite3
+    +   database: db/development.sqlite3
+    +   pool: 5
+    +   timeout: 5000
+    +
+    + production:
+    +   adapter: mysql2
+    +   encoding: utf8
+    +   reconnect: false
+    +   database: ulgood_production
+    +   pool: 5
+    +   username: <database user name>
+    +   password: <database password>
+    +  host: localhost
+
+    <for pg>
+    + #production:
+    + #  adapter: postgresql
+    + #  encoding: unicode
+    + #  database: ulgood_production
+    + #  pool: 5
+    + #  username: <database user name>
+    + #  password: <database password>
+
+4. Create Main controller:
+
+    rails generate controller main home
+
+5. Delete all but 'favicon.ico' from '/public'.
+
+6. Change '/config/routes.rb':
+
+    </config/routes.rb>
+    +  root :to => "main#home"
+
+7. Scaffolding User model:
+
+    rails generate scaffold User name:string admin:boolean avatar:string
+
+8. Create '/initializers/ulgood/ulgood.rb':
+
+    </initializers/ulgood/ulgood.rb>
+    + # This key using to check admin user. :admin field in User model is generating by hash of this key and user id.
+    + Ulgood::Application.config.ulgood_admin_key = 'some_random_token'
+
+9. Add to 'config/application.rb':
+
+    <config/application.rb>
+    = config.autoload_paths += %W(#{config.root}/config/ulgood)
+
+10. Add 'admin?' method to User model:
+
+    <app/models/user.rb>
+    + def admin?
+    +     self.admin == Digest::MD5.hexdigest(Ulgood::Application.config.ulgood_admin_key + self.id.to_s)
+    + end
+
+11. Add validates to User model:
+
+    <app/models/user.rb>
+    + validates :name,
+    +     :presence => true
+
+12. Delete from User controller actions "new" and "edit", with their views and "_form" partial
+
+13. Scaffolding social_accounts:
+
+    rails generate scaffold social_accounts username:string nickname:string provider:string url:string
+
+14. Setting up devise:
+
+    rails generate devise:install
+
+15. Set devise on social_accounts:
+
+    rails generate devise social_accounts
+
+16. Add :omniauthable parameter to devise model, and delete unusable parameters:
+
+    <app/models/social_account.rb>
+    = devise :database_authenticatable, :registerable,
+             :trackable, :validatable, :omniauthable
+
+17. Create callbacks controller:
+
+    rails generate controller social_accounts::OmniauthCallbacks facebook vkontakte google twitter
+
+18. Do callbacks controller inherit of Devise::OmniauthCallbacksController:
+
+    </app/controllers/social_accounts/omniauth_callbacks_controller.rb>
+    = class SocialAccounts::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+
+19. Make routes:
+
+    <config/routes.rb>
+    - get *
+
+    =  devise_for :social_accounts, :controllers => { :omniauth_callbacks => "social_accounts/omniauth_callbacks" }
+
+    =  resources :social_accounts, :only => [ :destroy ]
+
+20. Add app keys to devise initialization:
+
+    <config/initializers/devise.rb>
+    +  config.omniauth :facebook, <id>, <key>
+    +  config.omniauth :vkontakte,  <id>, <key>
+    +  config.omniauth :twitter, <id>, <key>
+    +  config.omniauth :google,  <id>, <key>
+
+21. Add methods to find created users:
+
+    <app/models/social_accounts.rb>
+    <for each <social_net>>
+    + def self.find_for_<social_net>_oauth access_token
+    +
+    +     if social_account  = SocialAccount.where(:url => access_token.info.urls.<social_net>).first
+    +       social_account
+    +     else
+    +       SocialAccount.create!(
+    +           :provider => access_token.provider,
+    +           :url => access_token.info.urls.<social_net>,
+    +           :username => access_token.info.name,
+    +           :nickname => access_token.info.nickname,
+    +           :email => access_token.info.nickname+'@<social_net>.com',
+    +           :password => Devise.friendly_token[0,20]
+    +       )
+    +     end
+    +
+    +   end
+
+    Giving data may be different!
+
+22. Add callback actions:
+
+    </app/controllers/social_accounts/omniauth_callbacks_controller.rb>
+    <for each <social_net>>
+    = def <social_net>
+    + social_account = SocialAccount.find_for_<social_net>_oauth request.env["omniauth.auth"]
+    +     if social_account.persisted?
+    +       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "<social_net>"
+    +       sign_in_and_redirect social_account, :event => :authentication
+    +     else
+    +       flash[:notice] = "authentication error"
+    +       redirect_to root_path
+    + end
+
+23. Make relations of user and social account:
+
+    <app/models/user.rb>
+    + has_many :social_accounts, :dependent => :destroy
+
+    <app/models/social_account.rb>
+    + belongs_to :user
+
+24. Create message model:
+
+    rails generate scaffold Message message:string
+
+25. Make relations of social account and message:
+
+    <app/models/message.rb>
+    + belongs_to :social_account
+
+    <app/models/social_account.rb>
+    + has_many :messages, :dependent => :destroy
+
+26. Add relations ids to migrations:
+
+    <db/migrations/*_create_messages.rb>
+    + t.integer :social_account_id
+
+    <db/migrations/*_create_social_accounts.rb>
+    + t.integer :user_id
+
+27. Make public visibility to ids in models:
+
+    <app/models/message.rb>
+    + attr_accessible :social_account_id
+
+    <app/models/social_account.rb>
+    + attr_accessible :user_id
+
+28. Delete unusable actions from Social accounts controller:
+
+    <app/controllers/social_accounts_controller.rb>
+    -- def: update
+            edit
+            show
+            new
+            index
+
+29. Add login action to Social accounts controller:
+
+    <app/controllers/social_accounts_controller.rb>
+    + def login
+    +     redirect_to social_user_omniauth_authorize_path(params[:provider].to_sym)
+    + end
+
+    and route for this:
+
+    <config/routes.rb>
+    + match "login" => "social_accounts#login"
+
+To switch production:
+    'bundle install' without parameters;
+    setup '/config/database.yml';
+    convert all 'erb' views to 'haml'.

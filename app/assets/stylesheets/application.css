@@ -1,0 +1,483 @@
+/*
+ = require_self
+ = require_tree .
+*/
+
+
+/* Global */
+
+@font-face {
+    font-family: micfont;
+    src: url(/fonts/PFSquareSansPro-Regular.ttf)
+}
+
+/* end Global */
+
+
+/* Header */
+header {
+    position: fixed;
+    left:0px;
+    top:0px;
+    width: 100%;
+    height: 30%;
+}
+
+#miclogo {
+    position: absolute;
+    left: 20px;
+    top: 50px;
+}
+
+#miclogo img {
+    height:150px;
+    width:130px;
+}
+
+/* Head text: "Ни дня без добрых дел!" */
+#header_text {
+    font-family: micfont;
+    z-index: 1;
+    position: absolute;
+    font-size: 50px;
+    top: 30%;
+    right: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+#user_panel {
+    font-family: micfont;
+    position: fixed;
+    top:0px;
+    width: auto;
+    right:0px;
+}
+
+#user_panel a {
+    color: #F9BD27;
+    text-decoration: none;
+}
+
+#user_panel_content {
+    float: right;
+}
+
+.user_panel_button {
+    float: right;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#user_name {
+    float: right;
+    margin-right: 10px;
+}
+
+/* end Header */
+
+
+/* Main for all pages */
+
+#main {
+    font-family: micfont;
+    position: absolute;
+    top: 50px;
+    left:200px;
+    font-size: 25px;
+    width: 700px;
+}
+
+#main a {
+    text-decoration: none;
+    color: #F9BD27;
+}
+
+.counters {
+    z-index:6;
+    position: fixed;
+    top: 90px;
+    right: 10px;
+    font-family: "micfont";
+    font-size: 20px;
+}
+
+/* Digits in counters */
+.counter_number {
+    font-family: "micfont";
+    font-size: 60px;
+    color: #AAA;
+    text-align: center;
+}
+.counter_number a{
+    color: #F9BD27;
+}
+
+.simple_counter {
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+}
+
+.social_post {
+    -webkit-transition: all 0.6s ease;
+    -moz-transition:    all 0.6s ease;
+    -o-transition:      all 0.6s ease;
+    opacity: 0;
+    float:right;
+    margin-left: 5px;
+
+}
+
+.post_text {
+    float:left
+}
+
+#post_form {
+    z-index: 9;
+}
+
+#post_form table {
+    width:100%;
+}
+
+#post_form td {
+    height:50px;
+}
+
+#post_form textarea {
+    height: 100%;
+    width: 100%;
+    resize: none;
+    text-indent: 3px;
+    -moz-border-radius-bottomleft: 6px;
+    -moz-border-radius-topleft: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -webkit-border-top-left-radius: 6px;
+    border-bottom-left-radius:6px;
+    border-top-left-radius: 6px;
+    border:2px solid #F9BD27;
+}
+
+#post_form textarea:focus {
+    outline:none;
+}
+
+#text_count {
+    position: absolute;
+    right: 125px;
+    top: 60px;
+}
+
+#post_form input[type="submit"] {
+    width: 100%;
+    height: 100%;
+    -moz-box-shadow:inset 0px 0px 0px 0px #fff6af;
+    -webkit-box-shadow:inset 0px 0px 0px 0px #fff6af;
+    box-shadow:inset 0px 0px 0px 0px #fff6af;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fce0a8), color-stop(1, #f9be27) );
+    background:-moz-linear-gradient( center top, #fce0a8 5%, #f9be27 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fce0a8', endColorstr='#f9be27');
+    background-color:#fce0a8;
+    -moz-border-radius-bottomright: 6px;
+    -moz-border-radius-topright: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    border-bottom-right-radius:6px;
+    border-top-right-radius: 6px;
+    border:2px solid #F9BD27;
+    display:inline-block;
+    color:#333333;
+    font-family:arial;
+    font-size:15px;
+    text-decoration:none;
+}
+
+#post_form input[type=submit]:disabled:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fce0a8), color-stop(1, #f9be27) );
+    background:-moz-linear-gradient( center top, #fce0a8 5%, #f9be27 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fce0a8', endColorstr='#f9be27');
+    background-color:#fce0a8;
+}
+
+#post_form input[type=submit]:disabled:active {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fce0a8), color-stop(1, #f9be27) );
+    background:-moz-linear-gradient( center top, #fce0a8 5%, #f9be27 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fce0a8', endColorstr='#f9be27');
+    background-color:#fce0a8;
+}
+
+#post_form input[type="submit"]:hover {
+     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f9be27), color-stop(1, #fce0a8) );
+     background:-moz-linear-gradient( center top, #f9be27 5%, #fce0a8 100% );
+     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9be27', endColorstr='#fce0a8');
+     background-color:#f9be27;
+}
+
+#post_form input[type="submit"]:active {
+      position:relative;
+      top:1px;
+}
+
+#post_form input[type=submit]:disabled {
+    color:#aaa;
+    background-color: #eee;
+}
+
+
+
+#text_count {
+    position: absolute;
+}
+
+#ava img {
+    height:150px;
+}
+
+#name_line {
+    position: absolute;
+    left: 150px;
+    top: 0px;
+    font-size: 35px;
+}
+
+#social_panel {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+}
+
+.date {
+    font-family: "micfont";
+    font-size: 36px;
+    color: #AAA;
+}
+
+.social_post {
+    -webkit-transition: all 0.6s ease;
+    -moz-transition:    all 0.6s ease;
+    -o-transition:      all 0.6s ease;
+    opacity: 0;
+}
+
+
+.admin_choose {
+    float:left;
+    margin-right: 5px;
+}
+
+.today_list_item {
+    z-index: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.today_list_item a {
+    color: #F9BD27;
+}
+
+.user_name {
+    text-align: right;
+}
+
+/* Footer */
+footer {
+    z-index:5;
+    position:fixed;
+    left: 0px;
+    bottom: 0%;
+    width: 100%;
+    height: 130px;
+    font-family: "micfont";
+    font-size: 14px;
+
+}
+
+#footer_top_line {
+    position: absolute;
+    width:100%;
+    height: 10px;
+    top:0px;
+    background-color: #F9BD27;
+}
+
+#footer_fill {
+    position: absolute;
+    z-index: -1;
+    width:100%;
+    height:100%;
+    background: #fce0a8; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fce0a8 0%, #f9bd27 99%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fce0a8), color-stop(99%,#f9bd27)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fce0a8 0%,#f9bd27 99%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fce0a8 0%,#f9bd27 99%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fce0a8 0%,#f9bd27 99%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fce0a8 0%,#f9bd27 99%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fce0a8', endColorstr='#f9bd27',GradientType=0 ); /* IE6-9 */
+}
+
+#footer_bg {
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#footer_text {
+    position: absolute;
+    left:20px;
+    bottom:20px;
+}
+
+#footer_text a{
+    color: black;
+    text-decoration: none;
+}
+
+#men {
+    position: relative;
+    float: right;
+    bottom: -10%;
+    height: 90%;
+}
+
+/* end Footer */
+
+/* end */
+
+
+
+@font-face {
+    font-family: micfont;
+    src: url(/fonts/PFSquareSansPro-Regular.ttf)
+}
+
+/* Main controller */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 0;
+}
+/* New post form */
+.post_form {
+    font-size: 25px;
+    font-family: "micfont";
+    width:625px;
+    position: relative;
+    top: 83px;
+    left: 19%;
+}
+
+/* Message text area */
+.post_form textarea {
+    position:absolute;
+    text-indent: 3px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: white;
+    border: 2px solid #f9bd27;
+    border-color: #f9bd27;
+    height: 50px;
+    width: 76%;
+    resize: none;
+}
+
+/* Message text area highlighting on focus */
+.post_form textarea:focus {
+    outline:none;
+    border-radius:10 px;
+    background-color: #EEE;
+    border: 2px solid #f9bd27;
+    border-color: #f9bd27;
+}
+
+/* Submit button */
+.post_form input[type="submit"] {
+    position: absolute;
+    top:55px;
+    right: 0%;
+    height: 58px;;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #f9bd27;
+    border-color: #f9bd27;
+    color: #FFF;
+    font-size: 25px;
+    font-family: "micfont";
+}
+
+.post_form input[type=submit]:disabled {
+    color:#aaa;
+    background-color: #eee;
+}
+
+/* end New post form */
+/* Home action */
+
+/* Social icons to post */
+.social_post {
+    -webkit-transition: all 0.6s ease;
+    -moz-transition:    all 0.6s ease;
+    -o-transition:      all 0.6s ease;
+    opacity: 0;
+}
+
+/* Post button "А что сделал ты?" (link_tag) */
+.post_button {
+    color: black;
+    background-color:white;
+    padding:7px;
+    position:absolute;
+    font-family: 'micfont';
+    font-size:35px;
+    text-decoration:none;
+    border: solid 6px #f9bd27;
+    border-radius: 25px;
+    border-bottom-color:#eba800;
+    border-right-color:#eba800;
+}
+
+/* Active post button (overloading) */
+.post_button:active {
+    border: solid 6px #eba800;
+    border-bottom-color:#f9bd27;
+    border-right-color:#f9bd27;
+}
+
+/* List item link to the user */   /* CHECK FOR NECESSARY */
+.today_list_item {
+    z-index: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.today_list_item a {
+    color: #F9BD27;
+}
+
+#login_buttons {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    left: 5%;
+    top: -8px;
+}
+
+.login_icon {
+    float: left;
+    margin-right: 20%;
+    border: 4px solid #F9BD27;
+    background-color: #f9bd27;
+}
+
+/* end Home action */
+
+/* end */

@@ -1,0 +1,11 @@
+#post_form
+  = form_for :message, :url => "/create" do |f|
+    %table{ :cellspacing => 0, :cellpadding => 0 }
+      %tr
+        Я сегодня:
+      %tr
+        %td
+          = f.text_area :message, :onkeypress => "counter(this);", :onkeyup => "counter(this);", :onchange => "counter(this);", :maxlength => 100, :cols => 40, :rows => 3, :required => ""
+          <span id='text_count'>100</span>
+        %td{ :style => "width: 120px;" }
+          = f.submit :disabled, :value => "Рассказать!", :id => "post", :disabled => ""
