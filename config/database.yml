@@ -11,7 +11,7 @@ production:
   database: ulgood_production
   pool: 5
   username: root
-  password:
+  password: bybwbfnbdf73
   host: localhost
 
 #production:
