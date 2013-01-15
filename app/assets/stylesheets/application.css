@@ -231,12 +231,12 @@ header {
 }
 
 #ava img {
-    height:150px;
+   width: 150px;
 }
 
 #name_line {
     position: absolute;
-    left: 150px;
+    left: 160px;
     top: 0px;
     font-size: 35px;
 }
@@ -244,7 +244,7 @@ header {
 #social_panel {
     position: absolute;
     top: 50px;
-    left: 150px;
+    left: 160px;
 }
 
 .date {

@@ -13,19 +13,19 @@ end
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
+  gem 'uglifier'
 end
 
-
-gem 'activerecord-mysql2-adapter'
 gem 'mysql2'
 #  gem 'pg'
 gem 'unicorn'
 
+gem 'rb-readline'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem 'omniauth-vkontakte', '1.0.6'
+gem 'omniauth-vkontakte', '1.2.0'
 gem 'omniauth-twitter'
 gem "omniauth-google"

@@ -16,8 +16,13 @@ class SocialAccount < ActiveRecord::Base
 
     if social_account  = SocialAccount.where(:url => access_token.info.urls.Facebook).first
       if cookies[:user].present?
+<<<<<<< HEAD
         social_account.user_id=cookies[:user]
         cookies[:user] = ""
+=======
+	social_account.user_id=cookies[:user]
+	cookies[:user] = ""	
+>>>>>>> production
       end
       social_account.save!
       social_account
@@ -47,8 +52,13 @@ class SocialAccount < ActiveRecord::Base
 
     if social_account  = SocialAccount.where(:url => access_token.info.urls.Vkontakte).first
             if cookies[:user].present?
+<<<<<<< HEAD
         social_account.user_id=cookies[:user]
         cookies[:user] = ""
+=======
+	social_account.user_id=cookies[:user]
+	cookies[:user] = ""	
+>>>>>>> production
       end
       social_account.save!
       social_account
@@ -57,14 +67,14 @@ class SocialAccount < ActiveRecord::Base
         new_user = User.find(cookies[:user])
         cookies[:user] = ""
       else
-        new_user = User.create!(:name => access_token.info.name, :avatar => "/images/mic_logo.png")
+        new_user = User.create!(:name => access_token.info.name, :avatar => access_token.extra.raw_info.photo_big)
       end
       SocialAccount.create!(
           :provider => access_token.provider,
           :url => access_token.info.urls.Vkontakte,
           :username => access_token.info.name,
-          :nickname => access_token.extra.raw_info.domain,
-          :email => access_token.extra.raw_info.domain+'@vk.com',
+          :nickname => access_token.extra.raw_info.screen_name,
+          :email => access_token.extra.raw_info.screen_name+"@vk.com",
           :password => Devise.friendly_token[0,20],
           :user_id => new_user.id
       )
@@ -77,8 +87,13 @@ class SocialAccount < ActiveRecord::Base
 
     if social_account  = SocialAccount.where(:url => access_token.info.urls.Twitter).first
             if cookies[:user].present?
+<<<<<<< HEAD
         social_account.user_id=cookies[:user]
         cookies[:user] = ""
+=======
+	social_account.user_id=cookies[:user]
+	cookies[:user] = ""	
+>>>>>>> production
       end
       social_account.save!
       social_account
@@ -106,8 +121,13 @@ class SocialAccount < ActiveRecord::Base
 
     if social_account  = SocialAccount.where(:email => access_token.info.email).first
             if cookies[:user].present?
+<<<<<<< HEAD
         social_account.user_id=cookies[:user]
         cookies[:user] = ""
+=======
+	social_account.user_id=cookies[:user]
+	cookies[:user] = ""	
+>>>>>>> production
       end
       social_account.save!
       social_account
