@@ -1,3 +1,5 @@
+  GNU nano 2.2.6                    File: social_account.rb                                               
+
 # -*- encoding : utf-8 -*-
 class SocialAccount < ActiveRecord::Base
 
@@ -13,7 +15,10 @@ class SocialAccount < ActiveRecord::Base
   def self.find_for_facebook_oauth access_token, cookies
 
     if social_account  = SocialAccount.where(:url => access_token.info.urls.Facebook).first
-      social_account.user_id=cookies[:user]
+      if cookies[:user].present?
+        social_account.user_id=cookies[:user]
+        cookies[:user] = ""
+      end
       social_account.save!
       social_account
     else
@@ -36,10 +41,15 @@ class SocialAccount < ActiveRecord::Base
 
   end
 
-  def self.find_for_vkontakte_oauth access_token, cookies
+
+
+ def self.find_for_vkontakte_oauth access_token, cookies
 
     if social_account  = SocialAccount.where(:url => access_token.info.urls.Vkontakte).first
-      social_account.user_id=cookies[:user] if cookies[:user].present?
+            if cookies[:user].present?
+        social_account.user_id=cookies[:user]
+        cookies[:user] = ""
+      end
       social_account.save!
       social_account
     else
@@ -62,10 +72,14 @@ class SocialAccount < ActiveRecord::Base
 
   end
 
+
   def self.find_for_twitter_oauth access_token, cookies
 
     if social_account  = SocialAccount.where(:url => access_token.info.urls.Twitter).first
-      social_account.user_id=cookies[:user] if cookies[:user].present?
+            if cookies[:user].present?
+        social_account.user_id=cookies[:user]
+        cookies[:user] = ""
+      end
       social_account.save!
       social_account
     else
@@ -91,12 +105,15 @@ class SocialAccount < ActiveRecord::Base
   def self.find_for_google_oauth access_token, cookies
 
     if social_account  = SocialAccount.where(:email => access_token.info.email).first
-      social_account.user_id=cookies[:user] if cookies[:user].present?
+            if cookies[:user].present?
+        social_account.user_id=cookies[:user]
+        cookies[:user] = ""
+      end
       social_account.save!
       social_account
     else
       if cookies[:user].present?
-        new_user = User.find()
+        new_user = User.find(cookies[:user])
         cookies[:user] = ""
       else
         new_user = User.create!(:name => access_token.info.name, :avatar => "/images/mic_logo.png")
@@ -113,5 +130,6 @@ class SocialAccount < ActiveRecord::Base
     end
 
   end
+
 
 end
