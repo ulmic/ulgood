@@ -86,6 +86,7 @@ header {
     left:200px;
     font-size: 25px;
     width: 700px;
+    height: 100%;
 }
 
 #main a {
@@ -389,7 +390,7 @@ header {
 /* Message text area highlighting on focus */
 .post_form textarea:focus {
     outline:none;
-    border-radius:10 px;
+    border-radius:10px;
     background-color: #EEE;
     border: 2px solid #f9bd27;
     border-color: #f9bd27;
@@ -465,17 +466,31 @@ header {
 
 #login_buttons {
     z-index: 10;
-    position: absolute;
+    position: fixed;
     width: 100%;
-    left: 5%;
-    top: -8px;
+    left: 10%;
+    bottom: 28%;
 }
 
 .login_icon {
     float: left;
-    margin-right: 20%;
-    border: 4px solid #F9BD27;
+    margin-right: 18%;
+    border: 6px solid #F9BD27;
     background-color: #f9bd27;
+    width: 5%;
+    height: auto;
+}
+
+
+.login_icon img {
+    width:100%
+}
+
+#scrollable {
+    overflow: scroll;
+    position: absolute;
+    height: 67%;
+    width: 100%;
 }
 
 /* end Home action */

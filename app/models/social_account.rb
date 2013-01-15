@@ -24,7 +24,7 @@ class SocialAccount < ActiveRecord::Base
         new_user = User.find(cookies[:user])
         cookies[:user] = ""
       else
-        new_user= User.create!(:name => access_token.info.name, :avatar => "/images/mic_logo.png")
+        new_user= User.create!(:name => access_token.info.name, :avatar => "/images/anonim.jpg")
       end
       SocialAccount.create!(
           :provider => access_token.provider,
@@ -69,7 +69,6 @@ class SocialAccount < ActiveRecord::Base
   end
 
   def self.find_for_twitter_oauth access_token, cookies
-
     if social_account  = SocialAccount.where(:url => access_token.info.urls.Twitter).first
             if cookies[:user].present?
 	social_account.user_id=cookies[:user]
@@ -82,7 +81,7 @@ class SocialAccount < ActiveRecord::Base
         new_user = User.find(cookies[:user])
         cookies[:user] = ""
       else
-        new_user = User.create!(:name => access_token.info.name, :avatar => "/images/mic_logo.png")
+        new_user = User.create!(:name => access_token.info.name, :avatar => "/images/anonim.jpg")
       end
       SocialAccount.create!(
           :provider => access_token.provider,
@@ -111,7 +110,7 @@ class SocialAccount < ActiveRecord::Base
         new_user = User.find(cookies[:user])
         cookies[:user] = ""
       else
-        new_user = User.create!(:name => access_token.info.name, :avatar => "/images/mic_logo.png")
+        new_user = User.create!(:name => access_token.info.name, :avatar => "/images/anonim.jpg")
       end
       SocialAccount.create!(
           :provider => access_token.provider,
