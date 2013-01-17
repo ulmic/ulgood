@@ -1,16 +1,17 @@
 =render "layouts/header"
 
 #main{ :style => @main_style }
-  #scrollable
-    - if social_account_signed_in?
-      =raw counters
-      =render "post_form"
+  - if social_account_signed_in?
+    =raw counters
+    =render "post_form"
+    #posts
       =raw posts (params[:messages])
-    - else
-      %br
-      <span style="color:#f9bd27;">
-      %b Доброе
-      </span>
-      время суток!
-      %br
-      Пожалуйста, зарегистрируйтесь через одну из социальных сетей:
+    #blank{:style => "position: absolute;bottom: 50;height: 130px;width: 100%;"}
+  - else
+    %br
+    <span style="color:#f9bd27;">
+    %b Доброе
+    </span>
+    время суток!
+    %br
+    Пожалуйста, зарегистрируйтесь через одну из социальных сетей:

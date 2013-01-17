@@ -81,7 +81,7 @@ header {
 
 #main {
     font-family: micfont;
-    position: absolute;
+    position: fixed;
     top: 50px;
     left:200px;
     font-size: 25px;
