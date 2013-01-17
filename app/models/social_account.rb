@@ -1,5 +1,3 @@
-  GNU nano 2.2.6                    File: social_account.rb                                               
-
 # -*- encoding : utf-8 -*-
 class SocialAccount < ActiveRecord::Base
 
@@ -16,13 +14,8 @@ class SocialAccount < ActiveRecord::Base
 
     if social_account  = SocialAccount.where(:url => access_token.info.urls.Facebook).first
       if cookies[:user].present?
-<<<<<<< HEAD
-        social_account.user_id=cookies[:user]
-        cookies[:user] = ""
-=======
 	social_account.user_id=cookies[:user]
 	cookies[:user] = ""	
->>>>>>> production
       end
       social_account.save!
       social_account
@@ -52,13 +45,8 @@ class SocialAccount < ActiveRecord::Base
 
     if social_account  = SocialAccount.where(:url => access_token.info.urls.Vkontakte).first
             if cookies[:user].present?
-<<<<<<< HEAD
         social_account.user_id=cookies[:user]
         cookies[:user] = ""
-=======
-	social_account.user_id=cookies[:user]
-	cookies[:user] = ""	
->>>>>>> production
       end
       social_account.save!
       social_account
@@ -87,13 +75,8 @@ class SocialAccount < ActiveRecord::Base
 
     if social_account  = SocialAccount.where(:url => access_token.info.urls.Twitter).first
             if cookies[:user].present?
-<<<<<<< HEAD
-        social_account.user_id=cookies[:user]
-        cookies[:user] = ""
-=======
 	social_account.user_id=cookies[:user]
 	cookies[:user] = ""	
->>>>>>> production
       end
       social_account.save!
       social_account
@@ -121,13 +104,8 @@ class SocialAccount < ActiveRecord::Base
 
     if social_account  = SocialAccount.where(:email => access_token.info.email).first
             if cookies[:user].present?
-<<<<<<< HEAD
-        social_account.user_id=cookies[:user]
-        cookies[:user] = ""
-=======
 	social_account.user_id=cookies[:user]
 	cookies[:user] = ""	
->>>>>>> production
       end
       social_account.save!
       social_account
