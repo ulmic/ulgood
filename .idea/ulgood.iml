@@ -21,7 +21,6 @@
     <orderEntry type="library" scope="PROVIDED" name="actionpack (v3.2.8, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v3.2.8, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v3.2.8, RVM: ruby-1.9.3-p286) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="activerecord-mysql2-adapter (v0.0.3, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activeresource (v3.2.8, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.2.8, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v3.0.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
@@ -59,7 +58,7 @@
     <orderEntry type="library" scope="PROVIDED" name="omniauth-oauth (v1.0.1, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth-oauth2 (v1.1.1, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth-twitter (v0.0.13, RVM: ruby-1.9.3-p286) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="omniauth-vkontakte (v1.0.6, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="omniauth-vkontakte (v1.2.0, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.4.0, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.4.1, RVM: ruby-1.9.3-p286) [gem]" level="application" />
@@ -70,6 +69,7 @@
     <orderEntry type="library" scope="PROVIDED" name="railties (v3.2.8, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="raindrops (v0.10.0, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v10.0.3, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rb-readline (v0.4.2, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.4, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.5, RVM: ruby-1.9.3-p286) [gem]" level="application" />
@@ -79,6 +79,7 @@
     <orderEntry type="library" scope="PROVIDED" name="tilt (v1.3.3, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.12, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.35, RVM: ruby-1.9.3-p286) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="uglifier (v1.3.0, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unicorn (v4.5.0, RVM: ruby-1.9.3-p286) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.1, RVM: ruby-1.9.3-p286) [gem]" level="application" />
   </component>

@@ -4,7 +4,9 @@
   - if social_account_signed_in?
     =raw counters
     =render "post_form"
-    =raw posts (params[:messages])
+    #posts
+      =raw posts (params[:messages])
+    #blank{:style => "position: absolute;bottom: 50;height: 130px;width: 100%;"}
   - else
     %br
     <span style="color:#f9bd27;">
