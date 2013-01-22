@@ -1,17 +1,16 @@
-=render "layouts/header"
-
-#main{ :style => @main_style }
-  - if social_account_signed_in?
-    =raw counters
-    =render "post_form"
-    #posts
-      =raw posts (params[:messages])
-    #blank{:style => "position: absolute;bottom: 50;height: 130px;width: 100%;"}
+- if social_account_signed_in?
+  - if params[:messages]=="all"
+    <span style = "font-size:40px; color:#aaa;">ДОБРЫЕ ДЕЛА ЗА ВСЁ ВРЕМЯ:</span>
   - else
-    %br
-    <span style="color:#f9bd27;">
-    %b Доброе
-    </span>
-    время суток!
-    %br
-    Пожалуйста, зарегистрируйтесь через одну из социальных сетей:
+    <span style = "font-size:40px; color:#aaa;">СЕГОДНЯ:</span>
+  <br>
+  =raw posts params[:messages]
+  <br>
+- else
+  %br
+  <span style="color:#f9bd27;">
+  %b Доброе
+  </span>
+  время суток!
+  %br
+  Пожалуйста, зарегистрируйтесь через одну из социальных сетей:

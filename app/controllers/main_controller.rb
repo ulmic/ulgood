@@ -3,7 +3,8 @@ class MainController < ApplicationController
 
   def home
     @head_style = "font-size: 30px;left: 20px;top: 0px;width: 50%;" if social_account_signed_in?
-    @main_style = "top:30%;" unless social_account_signed_in?
+    @main_style = "position: absolute; bottom: 50%;top:auto" unless social_account_signed_in?
+    @blank_style = "height:36%" unless social_account_signed_in?
   end
 
   def about

@@ -1,0 +1,14 @@
+<footer#{" style='height:35%;'" unless social_account_signed_in?}>
+=raw "<div class='bottom_alpha_block'></div>" if social_account_signed_in?
+#footer_bg
+  #login_buttons
+    =raw login_buttons unless social_account_signed_in?
+  #footer_top_line
+  #footer_fill
+    <img src="/assets/men.png" id="men">
+  #footer_text
+    <span style="font-size:15px;">2012, Ulgood.ru, УОМОО "Молодёжный Инициативный Центр", ulmic.ru</span>
+    %br
+    = link_to "О проекте", :controller => "main", :action => "about"
+    = link_to "Нашли ошибку?", "mailto:ulgood73@gmail.com"
+</footer>
