@@ -30,6 +30,7 @@ class SocialAccountsController < ApplicationController
   end
 
   def login
+    cookies[:back] = params[:back]
     cookies[:user] = current_social_account.user.id if social_account_signed_in?
     redirect_to social_account_omniauth_authorize_path(params[:provider].to_sym)
   end
