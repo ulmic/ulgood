@@ -24,7 +24,7 @@ class SocialAccount < ActiveRecord::Base
         new_user = User.find(cookies[:user])
         cookies[:user] = ""
       else
-        new_user= User.create!(:name => access_token.info.name, :avatar => "/images/anonim.jpg")
+        new_user= User.create!(:name => access_token.info.name, :avatar => "anonim.jpg")
       end
       SocialAccount.create!(
           :provider => access_token.provider,
@@ -84,7 +84,7 @@ class SocialAccount < ActiveRecord::Base
         new_user = User.find(cookies[:user])
         cookies[:user] = ""
       else
-        new_user = User.create!(:name => access_token.info.name, :avatar => "/images/anonim.jpg")
+        new_user = User.create!(:name => access_token.info.name, :avatar => "anonim.jpg")
       end
       SocialAccount.create!(
           :provider => access_token.provider,
@@ -113,7 +113,7 @@ class SocialAccount < ActiveRecord::Base
         new_user = User.find(cookies[:user])
         cookies[:user] = ""
       else
-        new_user = User.create!(:name => access_token.info.name, :avatar => "/images/anonim.jpg")
+        new_user = User.create!(:name => access_token.info.name, :avatar => "anonim.jpg")
       end
       SocialAccount.create!(
           :provider => access_token.provider,

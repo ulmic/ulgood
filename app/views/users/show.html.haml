@@ -1,10 +1,12 @@
 #user_info
   #ava
-    <img src="#{ @user.avatar }">
-  #social_panel
-    =raw social_panel
-  #name_line
-    = @user.name
+    =image_tag @user.avatar
+  #user
+    #name_line
+      = @user.name
+    #social_panel
+      =raw social_panel
 #posts
   =raw user_messages
+#blank{:style => @blank_style}
 <br>

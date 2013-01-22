@@ -6,7 +6,7 @@ module UsersHelper
     if gray.blank?
       link_to(social_image, url)
     else
-      link_to(social_image, "/login?provider=#{provider}&user=#{current_social_account.user.id}")
+      link_to(social_image, "/login?provider=#{provider}&user=#{current_social_account.user.id}&back=#{url_for}")
     end
   end
 

@@ -260,6 +260,11 @@ body a {
 
 /* Posts counters */
 
+#posts {
+    position: absolute;
+    top: 150px;
+}
+
 /* Counter div */
 .counters {
     z-index:6;
@@ -401,22 +406,22 @@ footer {
     margin-right: 5px;
 }
 
+#ava {
+    float: left;
+}
 
 #ava img {
     width: 150px;
 }
 
-#name_line {
-    position: absolute;
-    left: 160px;
-    top: 0px;
-    font-size: 35px;
+#user {
+    position: relative;
+    top:-10px;
+    left:10px;
 }
 
-#social_panel {
-    position: absolute;
-    top: 50px;
-    left: 160px;
+#name_line {
+    font-size: 35px;
 }
 
 .date {
