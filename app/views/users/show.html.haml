@@ -1,14 +1,10 @@
-=render "layouts/header"
-
-#main
-  #user_info
-    #ava
-      <img src="#{ @user.avatar }">
-    #social_panel
-      =raw social_panel
-    #name_line
-      = @user.name
-  #posts
-    =raw user_messages
-  #alpha_bottom
+#user_info
+  #ava
+    <img src="#{ @user.avatar }">
+  #social_panel
+    =raw social_panel
+  #name_line
+    = @user.name
+#posts
+  =raw user_messages
 <br>

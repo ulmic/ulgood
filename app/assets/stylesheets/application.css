@@ -1,6 +1,6 @@
 /*
  = require_self
- = require_tree .
+ *= require_tree .
 */
 
 
@@ -13,17 +13,48 @@
 
 /* end Global */
 
+#social_blank {
+    width: 10%;
+    height: 30px;
+    float: left;
+}
+
+#login_buttons {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    left: 10%;
+    bottom: 35%;
+}
+
+.login_icon {
+    float: left;
+    margin-right: 18%;
+    border: 6px solid #F9BD27;
+    background-color: #f9bd27;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 40px;
+}
+
+
+.login_icon img {
+    width:100%
+}
+
 
 /* Header */
 header {
     position: fixed;
-    left:0px;
     top:0px;
+    left:0px;
     width: 100%;
-    height: 30%;
+    z-index: 5;
 }
-
+/* Left top MIC logo */
 #miclogo {
+    z-index: 2;
     position: absolute;
     left: 20px;
     top: 50px;
@@ -36,22 +67,25 @@ header {
 
 /* Head text: "Ни дня без добрых дел!" */
 #header_text {
+    z-index: 2;
     font-family: micfont;
-    z-index: 1;
     position: absolute;
     font-size: 50px;
-    top: 30%;
+    top: 30px;
     right: 20px;
     text-decoration: none;
     color: black;
 }
 
+/* Top user panel */
+
+/* Panel */
 #user_panel {
+    z-index: 2;
+    position: absolute;
     font-family: micfont;
-    position: fixed;
-    top:0px;
-    width: auto;
-    right:0px;
+    float: right;
+    width: 100%;
 }
 
 #user_panel a {
@@ -59,95 +93,48 @@ header {
     text-decoration: none;
 }
 
-#user_panel_content {
-    float: right;
-}
-
+/* Logout button */
 .user_panel_button {
     float: right;
     margin-left: 5px;
     margin-right: 5px;
 }
 
+/* User panel text: "Здравствуйте, " */
 #user_name {
     float: right;
     margin-right: 10px;
 }
 
-/* end Header */
-
-
-/* Main for all pages */
-
-#main {
-    font-family: micfont;
-    position: fixed;
-    top: 50px;
-    left:200px;
-    font-size: 25px;
-    width: 700px;
-    height: 100%;
-}
-
-#main a {
+/* Username on the top user panel */
+.user_name a {
+    color: #F9BD27;
     text-decoration: none;
-    color: #F9BD27;
 }
 
-.counters {
-    z-index:6;
-    position: fixed;
-    top: 90px;
-    right: 10px;
-    font-family: "micfont";
-    font-size: 20px;
-}
-
-/* Digits in counters */
-.counter_number {
-    font-family: "micfont";
-    font-size: 60px;
-    color: #AAA;
-    text-align: center;
-}
-.counter_number a{
-    color: #F9BD27;
-}
-
-.simple_counter {
-    display: inline-block;
-    text-align: center;
-    width: 120px;
-}
-
-.social_post {
-    -webkit-transition: all 0.6s ease;
-    -moz-transition:    all 0.6s ease;
-    -o-transition:      all 0.6s ease;
-    opacity: 0;
-    float:right;
-    margin-left: 5px;
-
-}
-
-.post_text {
-    float:left
-}
+/* New post form */
 
 #post_form {
-    z-index: 9;
+    z-index: 5;
+    font-family: micfont;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    font-size: 25px;
+    width: 100%;
 }
 
 #post_form table {
-    width:100%;
+    width: 100%;
 }
 
 #post_form td {
-    height:50px;
+    vertical-align: top;
 }
 
 #post_form textarea {
-    height: 100%;
+    margin: 0px;
+    height: 40px;
     width: 100%;
     resize: none;
     text-indent: 3px;
@@ -166,13 +153,14 @@ header {
 
 #text_count {
     position: absolute;
-    right: 125px;
-    top: 60px;
+    bottom: 22px;
+    right: 393px;
+    font-size: 18px;
 }
 
 #post_form input[type="submit"] {
+    height: 40px;
     width: 100%;
-    height: 100%;
     -moz-box-shadow:inset 0px 0px 0px 0px #fff6af;
     -webkit-box-shadow:inset 0px 0px 0px 0px #fff6af;
     box-shadow:inset 0px 0px 0px 0px #fff6af;
@@ -209,15 +197,14 @@ header {
 }
 
 #post_form input[type="submit"]:hover {
-     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f9be27), color-stop(1, #fce0a8) );
-     background:-moz-linear-gradient( center top, #f9be27 5%, #fce0a8 100% );
-     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9be27', endColorstr='#fce0a8');
-     background-color:#f9be27;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f9be27), color-stop(1, #fce0a8) );
+    background:-moz-linear-gradient( center top, #f9be27 5%, #fce0a8 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9be27', endColorstr='#fce0a8');
+    background-color:#f9be27;
 }
 
 #post_form input[type="submit"]:active {
-      position:relative;
-      top:1px;
+
 }
 
 #post_form input[type=submit]:disabled {
@@ -225,35 +212,10 @@ header {
     background-color: #eee;
 }
 
+/* end New post form */
+/* Home action */
 
-
-#text_count {
-    position: absolute;
-}
-
-#ava img {
-   width: 150px;
-}
-
-#name_line {
-    position: absolute;
-    left: 160px;
-    top: 0px;
-    font-size: 35px;
-}
-
-#social_panel {
-    position: absolute;
-    top: 50px;
-    left: 160px;
-}
-
-.date {
-    font-family: "micfont";
-    font-size: 36px;
-    color: #AAA;
-}
-
+/* Social icons to post */
 .social_post {
     -webkit-transition: all 0.6s ease;
     -moz-transition:    all 0.6s ease;
@@ -261,12 +223,7 @@ header {
     opacity: 0;
 }
 
-
-.admin_choose {
-    float:left;
-    margin-right: 5px;
-}
-
+/* List item link to the user */   /* CHECK FOR NECESSARY */
 .today_list_item {
     z-index: 0;
     width: 100%;
@@ -274,27 +231,122 @@ header {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .today_list_item a {
     color: #F9BD27;
 }
 
-.user_name {
-    text-align: right;
+/* end Home action */
+
+/* end */
+
+
+/* Main div in the center */
+#main {
+    z-index: 1;
+    font-family: micfont;
+    font-size: 25px;
+    position: relative;
+    left: 200px;
+    top: 130px;
+    width: 50%;
+}
+
+/* Links in the Main div */
+body a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Posts counters */
+
+/* Counter div */
+.counters {
+    z-index:6;
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    font-family: "micfont";
+    font-size: 20px;
+}
+
+/* Digits in counters */
+.counter_number {
+    font-family: "micfont";
+    font-size: 60px;
+    color: #AAA;
+    text-align: center;
+}
+.counter_number a{
+    color: #f9bd27;
+
+}
+
+.simple_counter {
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+}
+
+#blank {
+    height: 130px;
+    width: 100%;
+}
+
+/* end Posts counters */
+.top_alpha_block {
+    z-index: 1;
+    position:fixed;
+    top: 0%;
+    height: 155px;
+    width:100%;
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 90%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(90%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 90%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 90%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 90%,rgba(255,255,255,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 90%,rgba(255,255,255,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+.bottom_alpha_block {
+    z-index: 50;
+    position: fixed;
+    bottom: 130px;
+    height: 30px;
+    width: 100%;
+    left: 0%;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+
+#count {
+    position:relative;
+    float:right;
+    right:150px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /* Footer */
 footer {
-    z-index:5;
-    position:fixed;
-    left: 0px;
-    bottom: 0%;
+    z-index: 10;
+    position: fixed;
     width: 100%;
     height: 130px;
     font-family: "micfont";
     font-size: 14px;
-
+    left: 0px;
+    bottom: 0px;
 }
 
+/* Footer links */
 #footer_top_line {
     position: absolute;
     width:100%;
@@ -344,155 +396,35 @@ footer {
     height: 90%;
 }
 
+.admin_choose {
+    float:left;
+    margin-right: 5px;
+}
+
+
+#ava img {
+    width: 150px;
+}
+
+#name_line {
+    position: absolute;
+    left: 160px;
+    top: 0px;
+    font-size: 35px;
+}
+
+#social_panel {
+    position: absolute;
+    top: 50px;
+    left: 160px;
+}
+
+.date {
+    font-family: "micfont";
+    font-size: 36px;
+    color: #AAA;
+}
+
 /* end Footer */
-
-/* end */
-
-
-
-@font-face {
-    font-family: micfont;
-    src: url(/fonts/PFSquareSansPro-Regular.ttf)
-}
-
-/* Main controller */
-header {
-    position: fixed;
-    width: 100%;
-    z-index: 0;
-}
-/* New post form */
-.post_form {
-    font-size: 25px;
-    font-family: "micfont";
-    width:625px;
-    position: relative;
-    top: 83px;
-    left: 19%;
-}
-
-/* Message text area */
-.post_form textarea {
-    position:absolute;
-    text-indent: 3px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    background-color: white;
-    border: 2px solid #f9bd27;
-    border-color: #f9bd27;
-    height: 50px;
-    width: 76%;
-    resize: none;
-}
-
-/* Message text area highlighting on focus */
-.post_form textarea:focus {
-    outline:none;
-    border-radius:10px;
-    background-color: #EEE;
-    border: 2px solid #f9bd27;
-    border-color: #f9bd27;
-}
-
-/* Submit button */
-.post_form input[type="submit"] {
-    position: absolute;
-    top:55px;
-    right: 0%;
-    height: 58px;;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: #f9bd27;
-    border-color: #f9bd27;
-    color: #FFF;
-    font-size: 25px;
-    font-family: "micfont";
-}
-
-.post_form input[type=submit]:disabled {
-    color:#aaa;
-    background-color: #eee;
-}
-
-/* end New post form */
-/* Home action */
-
-/* Social icons to post */
-.social_post {
-    -webkit-transition: all 0.6s ease;
-    -moz-transition:    all 0.6s ease;
-    -o-transition:      all 0.6s ease;
-    opacity: 0;
-}
-
-/* Post button "А что сделал ты?" (link_tag) */
-.post_button {
-    color: black;
-    background-color:white;
-    padding:7px;
-    position:absolute;
-    font-family: 'micfont';
-    font-size:35px;
-    text-decoration:none;
-    border: solid 6px #f9bd27;
-    border-radius: 25px;
-    border-bottom-color:#eba800;
-    border-right-color:#eba800;
-}
-
-/* Active post button (overloading) */
-.post_button:active {
-    border: solid 6px #eba800;
-    border-bottom-color:#f9bd27;
-    border-right-color:#f9bd27;
-}
-
-/* List item link to the user */   /* CHECK FOR NECESSARY */
-.today_list_item {
-    z-index: 0;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.today_list_item a {
-    color: #F9BD27;
-}
-
-#login_buttons {
-    z-index: 10;
-    position: fixed;
-    width: 100%;
-    left: 10%;
-    bottom: 28%;
-}
-
-.login_icon {
-    float: left;
-    margin-right: 18%;
-    border: 6px solid #F9BD27;
-    background-color: #f9bd27;
-    width: 5%;
-    height: auto;
-}
-
-
-.login_icon img {
-    width:100%
-}
-
-#scrollable {
-    overflow: scroll;
-    position: absolute;
-    height: 67%;
-    width: 100%;
-}
-
-/* end Home action */
 
 /* end */

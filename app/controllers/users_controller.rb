@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   def show
     @head_style = "font-size: 30px;left: 20px;top: 0px;width: 50%;"
     @user = User.find(params[:id])
+    @main_style = "top:60px;"
 
     respond_to do |format|
       format.html # show.html.erb
