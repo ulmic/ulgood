@@ -260,6 +260,11 @@ body a {
 
 /* Posts counters */
 
+#posts {
+    position: absolute;
+    top: 150px;
+}
+
 /* Counter div */
 .counters {
     z-index:6;
