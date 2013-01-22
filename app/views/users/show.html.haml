@@ -1,6 +1,6 @@
 #user_info
   #ava
-    =image_tag @user.avatar
+    =image_tag @user.avatar, :id => "ava_img"
   #user
     #name_line
       = @user.name
@@ -8,5 +8,9 @@
       =raw social_panel
 #posts
   =raw user_messages
-#blank{:style => @blank_style}
+%script
+  window.onload = function(){  
+  $(posts).offset(function(i,val){
+  return {top:$(ava_img).height()+$(ava_img).offset().top, left:val.left};
+  });};
 <br>
