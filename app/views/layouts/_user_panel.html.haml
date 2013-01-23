@@ -2,9 +2,9 @@
   .user_panel_button
     =link_to "Выход", destroy_social_account_session_path, :method => :delete
   .user_panel_button
-    =link_to "Новые дела (#{Message.where(:checked => nil).count})", :controller => :admin, :action => :issues if current_social_account.user.admin?
+    =link_to "Новые дела (#{Message.where(:checked => nil).count})", {:controller => :admin, :action => :issues}, :remote => true if current_social_account.user.admin?
 
   #user_name
     Здравствуйте,
-    =link_to current_social_account.user.name, :controller => "users", :action => "show", :id => current_social_account.user.id
+    =link_to current_social_account.user.name, {:controller => "users", :action => "show", :id => current_social_account.user.id}, :remote => true
   <div style="clear: both;"></div>

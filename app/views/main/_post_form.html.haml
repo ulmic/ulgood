@@ -1,11 +1,11 @@
 #post_form
   <span style="padding-left: 200px;">Я сегодня:</span>
-  = form_for :message, :url => "/create" do |f|
+  = form_for :message, :url => "/create", :remote => true do |f|
     %table{ :cellspacing => 0, :cellpadding => 0 }
       %tr
         %td{ :style => "width: 200px;" }
         %td
-          = f.text_area :message, :onkeypress => "counter(this);", :onkeyup => "counter(this);", :onchange => "counter(this);", :maxlength => 100, :cols => 40, :rows => 3, :required => ""
+          = f.text_area :message, :onkeypress => "counter(this);", :onkeyup => "counter(this);", :onchange => "counter(this);", :maxlength => 100, :cols => 40, :rows => 3, :required => "", :disabled => false
           <span id='text_count'>100</span>
         %td{ :style => "width: 120px;" }
           = f.submit :disabled, :value => "Рассказать!", :id => "post", :disabled => ""

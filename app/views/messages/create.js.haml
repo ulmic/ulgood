@@ -1,0 +1,5 @@
+:plain
+  $('#message_message').val("Принято!");
+  $('#message_message').attr("disabled","disabled");
+  document.getElementById('post').disabled=true;
+  $('#main').html("Ваше доброе дело принято! Оно появится здесь как только мы проверим его.<br> <a href='#{root_path}' data-remote='true' style = 'color:#f9bd27'>Вернуться назад</a>");
