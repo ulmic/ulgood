@@ -1,9 +1,9 @@
 # -*- encoding : utf-8 -*-
 module UsersHelper
 
-  def get_social_link_icon (provider, url, gray="")
-    social_image = image_tag("#{provider}-icon#{gray}.png", :alt => "#{provider}.com", :class => "round")
-    if gray.blank?
+  def get_social_link_icon (provider, url, small="")
+    social_image = image_tag("#{provider}-icon.png", :alt => "#{provider}.com", :class => "#{small}")
+    if small.blank?
       link_to(social_image, url)
     else
       link_to(social_image, "/login?provider=#{provider}&user=#{current_social_account.user.id}&back=#{url_for}")
@@ -33,7 +33,7 @@ module UsersHelper
     if params[:id] == current_social_account.user.id.to_s
       social_links.keys.each do |key|
         if social_links[key].blank?
-          panel += get_social_link_icon key.to_s, "", "-gray"
+          panel += get_social_link_icon key.to_s, "", "small"
         else
           panel += get_social_link_icon key.to_s, social_links[key]
         end
