@@ -1,0 +1,4 @@
+:plain
+  $('header').html(#{render("layouts/header").to_json.html_safe})
+  $('#main').html(#{render(:file => 'users/show.html.haml').to_json.html_safe})
+  $('#main').css("top","60px")

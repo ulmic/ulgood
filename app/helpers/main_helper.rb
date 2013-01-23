@@ -18,18 +18,29 @@ module MainHelper
 
     if messages_class == "all"
       messages = Message.where "checked!=0"
+
     else
       messages = Message.where :created_at => Time.now.midnight..Time.now+60*60*4
       messages = messages.where ("checked!=0")
-    end
 
+    end
+    if messages_class != "all"
+      posts += "<span style = 'font-size:40px; color:#aaa;'>СЕГОДНЯ:</span>"
+    else
+      posts += "<span style = 'font-size:40px; color:#aaa;'>ДОБРЫЕ ДЕЛА ЗА ВСЁ ВРЕМЯ:</span>"
+    end
     if messages.count == 0
       if messages_class != "all"
-        posts = "<br>Стань сегодня первым!"
+        posts += "<br>Стань сегодня первым!"
       else
-        posts = "<br>Добрых дел ещё нет. Расскажи о своём!"
+        posts += "<br>Добрых дел ещё нет. Расскажи о своём!"
       end
     else
+      if messages_class != "all"
+        posts += %{<span style = "font-size:40px; color:#aaa;">СЕГОДНЯ:</span>}
+      else
+        posts += %{<span style = "font-size:40px; color:#aaa;">ДОБРЫЕ ДЕЛА ЗА ВСЁ ВРЕМЯ:</span>}
+      end
       messages.reverse.each do |m|
         unless  messages_class != "all"
           if m.created_at.day != temp_date

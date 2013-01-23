@@ -1,9 +1,4 @@
 - if social_account_signed_in?
-  - if params[:messages]=="all"
-    <span style = "font-size:40px; color:#aaa;">ДОБРЫЕ ДЕЛА ЗА ВСЁ ВРЕМЯ:</span>
-  - else
-    <span style = "font-size:40px; color:#aaa;">СЕГОДНЯ:</span>
-  <br>
   =raw posts params[:messages]
   <br>
 - else
