@@ -13,6 +13,10 @@
 
 /* end Global */
 
+.small {
+height: 32px;
+}
+
 #social_blank {
     width: 10%;
     height: 30px;
