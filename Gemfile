@@ -16,9 +16,9 @@ group :assets do
   gem 'uglifier'
 end
 
-gem 'mysql2'
+#gem 'mysql2'
 #  gem 'pg'
-gem 'unicorn'
+#gem 'unicorn'
 
 gem 'rb-readline'
 gem 'jquery-rails'
