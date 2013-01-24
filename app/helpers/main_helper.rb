@@ -4,10 +4,10 @@ module MainHelper
   #TODO: DRY this!
   def login_buttons
     out = %{
-      <div class="login_icon">#{link_to (image_tag ("vkontakte-icon.png")), "/login?provider=vkontakte"}</div>
-      <div class="login_icon">#{link_to (image_tag ("facebook-icon.png")), "/login?provider=facebook"}</div>
-      <div class="login_icon">#{link_to (image_tag ("twitter-icon.png")), "/login?provider=twitter"}</div>
-      <div class="login_icon", style="margin-right:0">#{link_to (image_tag ("google-icon.png")), "/login?provider=google"}</div>
+      <div class="login_icon">#{link_to (image_tag ("vkontakte-icon-gray.png")), "/login?provider=vkontakte"}</div>
+      <div class="login_icon">#{link_to (image_tag ("facebook-icon-gray.png")), "/login?provider=facebook"}</div>
+      <div class="login_icon">#{link_to (image_tag ("twitter-icon-gray.png")), "/login?provider=twitter"}</div>
+      <div class="login_icon", style="margin-right:0">#{link_to (image_tag ("google-icon-gray.png")), "/login?provider=google"}</div>
       <div style="clear:both;"></div>
 }
   end
