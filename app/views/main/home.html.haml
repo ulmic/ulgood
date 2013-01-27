@@ -1,5 +1,5 @@
 - if social_account_signed_in?
-  =raw posts params[:messages]
+  =render "messages/all"
   <br>
 - else
   %script

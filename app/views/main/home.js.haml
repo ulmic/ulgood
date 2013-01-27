@@ -1,10 +1,5 @@
 :plain
-  clearInterval(PageUpdateInterval);
   $('header').html(#{render("layouts/header").to_json.html_safe})
-  $('#main').html("#{raw posts params[:messages]}<div id='blank' style=#{ @blank_style }></div>");
+  $('#main').html(#{render("messages/#{params[:messages] == "all" ? "all" : "today"}").to_json.html_safe});
   $('#main').css("top","130px")
   $('footer').html(#{render("layouts/footer").to_json.html_safe})
-  var PageUpdateInterval = setInterval(function() {
-    $('#main').html("#{raw posts params[:messages]}<div id='blank' style=#{ @blank_style }></div>");
-    console.log("d");
-  }, 1000);
