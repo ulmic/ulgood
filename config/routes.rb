@@ -20,7 +20,7 @@ Ulgood::Application.routes.draw do
   match "users" => "admin#users"
   match "/admin/delete/:id" => "messages#destroy", :method => :delete
   match "/admin/allow/:id" => "messages#check"
-
+  match "login_redirect" => "main#login_redirect"
   resources :users
 
 end

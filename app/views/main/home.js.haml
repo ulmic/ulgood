@@ -2,3 +2,4 @@
   $('header').html(#{render("layouts/header").to_json.html_safe})
   $('#main').html("#{raw posts params[:messages]}<div id='blank' style=#{ @blank_style }></div>");
   $('#main').css("top","130px")
+  $('footer').html(#{render("layouts/footer").to_json.html_safe})
