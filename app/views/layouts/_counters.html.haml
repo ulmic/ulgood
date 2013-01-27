@@ -1,0 +1,12 @@
+#counters{:style => "display:inline-block;"}
+  .no{:style=>"text-align:center;"}
+    Добрых дел
+  .simple_counter
+    Сегодня:
+    .counter_number{:id => "today_counter"}
+      #{link_to (Message.where("created_at >= :time AND checked != 0", :time => Time.now.midnight).count),  {:controller => "main", :action => "home"}, :remote => true}
+  .no{:style => "width:10px; display: inline-block;"}
+  .simple_counter
+    Всего:
+    .counter_number{:id => "all_counter"}
+      #{link_to Message.where("checked != 0").count, {:controller => "main", :action => "home", :messages => "all"}, :remote => true}
