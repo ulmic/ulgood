@@ -17,7 +17,11 @@ class MainController < ApplicationController
   end
 
   def about
-
+    @head_style = "font-size: 50px;left: 200px;top: 50px;width: 50%;"
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def posts
