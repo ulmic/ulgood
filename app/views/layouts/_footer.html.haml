@@ -9,6 +9,6 @@
   #footer_text
     <span style="font-size:15px;">2012, Ulgood.ru, УОМОО "Молодёжный Инициативный Центр", ulmic.ru</span>
     %br
-    = link_to "О проекте", :controller => "main", :action => "about"
+    = link_to "О проекте", {:controller => "main", :action => "about"}, :remote => true
     = link_to "Нашли ошибку?", "mailto:ulgood73@gmail.com"
 </footer>

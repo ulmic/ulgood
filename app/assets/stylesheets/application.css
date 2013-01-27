@@ -58,7 +58,7 @@ header {
 }
 /* Left top MIC logo */
 #miclogo {
-    z-index: 2;
+    z-index: 10;
     position: absolute;
     left: 20px;
     top: 50px;
