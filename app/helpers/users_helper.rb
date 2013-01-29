@@ -42,42 +42,5 @@ module UsersHelper
     panel
   end
 
-  def user_messages
-    messages_post = ""
-    temp_date = 0
-    messages = []
-    User.find(params[:id]).social_accounts.each do |i|
-      i.messages.each do |m|
-          messages << m if m.checked? || current_social_account.user.id.to_s == params[:id]
-      end
-    end
-    if messages.empty?
-      messages_post += "<br>У пользователя ещё нет добрых дел."
-    else
-          messages = messages.sort_by {|m| m.created_at}.reverse
-      messages.each do |m|
-        if (m.created_at.day != temp_date)
-          temp_date = m.created_at.day
-          messages_post += %{
-<br>
-<div class = "date">
-#{m.created_at.day}.#{m.created_at.month}
-</div>
-}
-        end
-        messages_post += %{
-        <div class = "message_item" #{ 'onclick = "show_full(this);" style="cursor:pointer;"' if m.message.length > 50 } onmouseover = "showSocialButtons(this);" onmouseout = "hideSocialButtons(this)">
-          #{image_tag("#{m.social_account.provider}-small-icon.png")}
-          <span style=#{"color:#ccc" unless m.checked?}>
-            #{m.message}
-          </span>
-          <div style="clear:both;"></div>
-        </div>
-}
-      end
-      messages_post
-    end
-  end
-
 
 end

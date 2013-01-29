@@ -1,0 +1,27 @@
+-messages = []
+-User.find(params[:id]).social_accounts.each do |i|
+  -i.messages.each do |m|
+    -messages << m if m.checked? || current_social_account.user.id.to_s == params[:id]
+-temp_date = 0
+- if messages.count == 0
+  <br>У пользователя ещё нет добрых дел.
+-else
+  -messages.reverse.each do |m|
+    -if m.created_at.day != temp_date
+      -temp_date = m.created_at.day
+      .date
+        ="#{m.created_at.day}.#{m.created_at.month}"
+      .today_list_item{ :onclick => "#{"show_full(this);" if m.message.length > 50}", :style => "#{"cursor:pointer;" if m.message.length > 50}", :onmouseover => "showSocialButtons(this);", :onmouseout => "hideSocialButtons(this)" }
+        =image_tag("#{m.social_account.provider}-small-icon.png")
+        =raw "<span#{' style=color:#ccc' unless m.checked?}>"
+        =m.message
+        =raw "</span>"
+        <span class = "social_post">
+        =link_to image_tag("vkontakte-small-icon.png", :alt => "В"), "http://vkontakte.ru/share.php?url=#{root_url}&image=#{root_url}/assets/mic_logo.png&title=Ulgood.ru: #{m.social_account.user.name} #{m.message} via Ulgood.ru http://ulgood.ru/"
+        </span>
+        <span class = "social_post">
+        =link_to image_tag("facebook-small-icon.png", :alt => "F"), "https://www.facebook.com/dialog/feed?app_id=188628294595434&link=#{root_url}&picture=http://ulgood.ru/assets/mic_logo.png&name=Ulgood.ru&caption=Ulgood.ru:&description=#{m.social_account.username} #{m.message} via Ulgood.ru http://ulgood.ru/&redirect_uri=http://ulgood.ru/"
+        </span>
+        <span class = "social_post">
+        =link_to image_tag("twitter-small-icon.png", :alt => "T"), "https://twitter.com/intent/tweet?original_referer=#{request.fullpath}&related=Ulgood.ru&source=tweetbutton&text=Ulgood.ru: #{m.social_account.username} #{m.message} via Ulgood.ru http://ulgood.ru/ &url=#{root_url}"
+        </span>
