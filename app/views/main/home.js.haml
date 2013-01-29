@@ -3,3 +3,8 @@
   $('#main').html(#{render("messages/#{params[:messages] == "all" ? "all" : "today"}").to_json.html_safe});
   $('#main').css("top","130px")
   $('footer').html(#{render("layouts/footer").to_json.html_safe})
+  $(window).scroll(function(){
+  if(self.innerHeight-$('footer').height()+58 > $(main).height()-$(this).scrollTop()){
+  console.log("reached bottom");
+  }
+  });

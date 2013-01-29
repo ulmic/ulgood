@@ -7,7 +7,7 @@
     #social_panel
       =raw social_panel
 #posts
-  =raw user_messages
+  =render "users/user_messages"
 %script
   window.onload = function(){  
   $(posts).offset(function(i,val){
