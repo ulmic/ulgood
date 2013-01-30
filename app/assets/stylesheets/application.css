@@ -27,19 +27,14 @@ height: 32px;
     z-index: 10;
     position: fixed;
     width: 100%;
-    left: 10%;
-    bottom: 35%;
+    left: 0;
 }
 
 .login_icon {
     float: left;
-    margin-right: 18%;
     border: 6px solid #F9BD27;
     background-color: #f9bd27;
-    width: 60px;
-    height: 60px;
     position: relative;
-    top: 40px;
 }
 
 

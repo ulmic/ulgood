@@ -1,11 +1,22 @@
 - if social_account_signed_in?
   =render "messages/today"
-  <br>
+  %br
 - else
   %script
     function Update() {
     $('#update').click();
     }
+    $(window).resize(function(){
+    var screen_width = window.innerWidth
+    var el = screen_width/20;
+    $('.login_icon').width(el).height(el).css('margin-left', el*4);
+    $($('#login_buttons').children()[0]).css('margin-left', el);
+    $('#login_buttons').css('bottom', $('footer').height()-($('.login_icon').height()+20)/2);
+    $('#main').width(window.innerWidth-220);
+    });
+    $(document).ready(function(){
+    $(window).resize();
+    });
   %br
   <span style="color:#f9bd27;">
   %b Доброе
