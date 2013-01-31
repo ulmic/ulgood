@@ -1,12 +1,13 @@
-<footer#{" style='height:35%;'" unless social_account_signed_in?}>
-=raw "<div class='bottom_alpha_block'></div>" if social_account_signed_in?
-#footer_bg
-  #login_buttons
-    =raw login_buttons unless social_account_signed_in?
-  #footer_top_line
-  #footer_fill
-    <img src="/assets/men.png" id="men">
+%footer{ :style => ('height:35%;' unless social_account_signed_in?) }
+  - if social_account_signed_in?
+    .bottom_alpha_block
+  #footer_bg
+    #login_buttons
+      =raw login_buttons unless social_account_signed_in?
+    #footer_top_line
+    #footer_fill
+      =image_tag "/assets/men.png", :id => "men"
   #footer_text
-    <span style="font-size:15px;">2012, Ulgood.ru, УОМОО "Молодёжный Инициативный Центр", ulmic.ru | </span>
+    %span{ :style => "font-size:15px;" }
+    2012, Ulgood.ru, УОМОО "Молодёжный Инициативный Центр", ulmic.ru |
     = link_to "О проекте", {:controller => "main", :action => "about"}, :remote => true
-</footer>
