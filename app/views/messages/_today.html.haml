@@ -1,10 +1,12 @@
 -messages = Message.where :created_at => Time.now.midnight..Time.now+60*60*4
 -messages = messages.where ("checked!=0")
+- messages = messages[0..messages.length-Integer(@offset)-1] if @offset.present?
 %span{ :style => 'font-size:40px; color:#aaa;'}
   СЕГОДНЯ:
 - if messages.count == 0
   %br
   Стань сегодня первым!
+  = @int
 -else
   -messages.reverse.each do |m|
     .today_list_item{ :onclick => "#{"show_full(this);" if m.message.length > 50}", :style => "#{"cursor:pointer;" if m.message.length > 50}", :onmouseover => "showSocialButtons(this);", :onmouseout => "hideSocialButtons(this)" }

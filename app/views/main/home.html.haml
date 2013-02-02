@@ -1,4 +1,5 @@
 - if social_account_signed_in?
+  -@offset = params[:offset]
   =render "messages/today"
   %br
 - else

@@ -18,8 +18,8 @@
     width: 100%;
     left: 0;
     top: 0;
-    min-height: 600;
-    min-width: 768;
+    min-height: 600px;
+    min-width: 600px;
 }
 
 .small {
