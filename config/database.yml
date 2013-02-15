@@ -4,20 +4,20 @@ development:
   pool: 5
   timeout: 5000
 
+#production:
+#  adapter: mysql2
+#  encoding: utf8
+#  reconnect: false
+#  database: ulgood_production
+#  pool: 5
+#  username: root
+#  password: bybwbfnbdf73
+#  host: localhost
+
 production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
+  adapter: postgresql
+  encoding: unicode
   database: ulgood_production
   pool: 5
-  username: root
-  password: bybwbfnbdf73
-  host: localhost
-
-#production:
-#  adapter: postgresql
-#  encoding: unicode
-#  database: untitled1_production
-#  pool: 5
-#  username: untitled1
-#  password:
+  username: ulgood
+  password: 4815162342

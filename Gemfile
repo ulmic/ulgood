@@ -20,6 +20,8 @@ gem 'mysql2'
 #  gem 'pg'
 gem 'unicorn'
 
+gem 'pg'
+gem 'activerecord-postgresql-adapter'
 gem 'rb-readline'
 gem 'jquery-rails'
 gem 'haml-rails'

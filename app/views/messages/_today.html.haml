@@ -1,5 +1,4 @@
 -messages = Message.where :created_at => Time.now.midnight..Time.now+60*60*4
--messages = messages.where ("checked!=0")
 <span style = 'font-size:40px; color:#aaa;'>СЕГОДНЯ:</span>
 - if messages.count == 0
   <br>Стань сегодня первым!
