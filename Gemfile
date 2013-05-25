@@ -16,8 +16,7 @@ group :assets do
   gem 'uglifier'
 end
 
-gem 'mysql2'
-#  gem 'pg'
+gem 'pg'
 gem 'unicorn'
 
 gem 'pg'
