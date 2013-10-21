@@ -4,7 +4,7 @@ Ulgood::Application.routes.draw do
   get "admin/users"
 
   get "admin/issues"
-
+  match "rabout" => "devise/main#about"
   resources :messages
 
   devise_for :social_accounts, :controllers => { :omniauth_callbacks => "social_accounts/omniauth_callbacks" }
