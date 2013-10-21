@@ -1,0 +1,10 @@
+/.bundle
+/db/*.sqlite3
+/log/*.log
+/tmp
+/.idea
+*.swp
+/config/database.yml
+/config/initializers/omniauth.rb
+/config/initializers/secret_token.rb
+/db/schema.rb

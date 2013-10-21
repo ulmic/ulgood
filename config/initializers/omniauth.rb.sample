@@ -1,0 +1,6 @@
+#Rails.application.config.middleware.use OmniAuth::Builder do
+#  provider :twitter, 'id', 'key'
+#  provider :google, 'id', 'key'
+#  provider :vkontakte, 'id', 'key'
+#  provider :facebook, 'id', 'key'
+#end
