@@ -30,9 +30,10 @@ class MainController < ApplicationController
   end
 
   def login_redirect
-    respond_to do |format|
-      format.html { render :layout => false }
-    end
+    redirect_to root_url
+    #respond_to do |format|
+    #  format.html { render :layout => false }
+    #end
   end
 
 end

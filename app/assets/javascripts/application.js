@@ -58,7 +58,8 @@ var reformalOptions = {
     tab_bg_color: "#f9be27",
     tab_border_color: "#FFFFFF",
     tab_image_url: "http://tab.reformal.ru/T9GC0LfRi9Cy0Ysg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/FFFFFF/a08a7c60392f68cb33f77d4f56cf8c6f/right/1/tab.png",
-    tab_border_width: 0
+    tab_border_width: 0,
+    tab_class_name: "reftab"
 };
 
 function reformal_script(){

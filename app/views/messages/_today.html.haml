@@ -1,4 +1,4 @@
--messages = Message.where :created_at => Time.now.midnight..Time.now+60*60*4
+-messages = Message.where :created_at => Time.now.midnight-4.hours..Time.now
 -messages = messages.where ("checked!=0")
 - messages = messages[0..messages.length-Integer(@offset)-1] if @offset.present?
 %span{ :style => 'font-size:40px; color:#aaa;'}
@@ -17,4 +17,4 @@
       %span{ :class => "social_post"}
         =link_to image_tag("facebook-small-icon.png", :alt => "F"), "https://www.facebook.com/dialog/feed?app_id=188628294595434&link=#{root_url}&picture=http://ulgood.ru/assets/mic_logo.png&name=Ulgood.ru&caption=Ulgood.ru:&description=#{m.social_account.username} #{m.message} via Ulgood.ru http://ulgood.ru/&redirect_uri=http://ulgood.ru/"
       %span{ :class => "social_post"}
-        =link_to image_tag("twitter-small-icon.png", :alt => "T"), "https://twitter.com/intent/tweet?original_referer=#{request.fullpath}&related=Ulgood.ru&source=tweetbutton&text=Ulgood.ru: #{m.social_account.username} #{m.message} via Ulgood.ru http://ulgood.ru/ &url=#{root_url}"
+        =link_to image_tag("twitter-small-icon.png", :alt => "T"), "https://twitter.com/intent/tweet?original_referer=#{request.fullpath}&related=Ulgood.ru&source=tweetbutton&text=Ulgood.ru: #{m.social_account.username} #{m.message} via http://ulgood.ru/ &url='http://ulgood.ru/'"

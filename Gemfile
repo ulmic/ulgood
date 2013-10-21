@@ -21,7 +21,7 @@ gem 'unicorn'
 
 gem 'pg'
 gem 'activerecord-postgresql-adapter'
-gem 'rb-readline'
+gem 'rb-readline', '~> 0.4.2'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'devise'

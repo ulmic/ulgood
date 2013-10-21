@@ -4,9 +4,9 @@
   .simple_counter
     Сегодня:
     .counter_number{:id => "today_counter"}
-      #{link_to (Message.where("created_at >= :time", :time => Time.now.midnight).count),  {:controller => "main", :action => "home"}, :remote => true}
+      #{link_to (Message.where("checked > 0 AND created_at >= :time", :time => Time.now.midnight-4.hours).count),  {:controller => "main", :action => "home"}, :remote => true}
   .no{:style => "width:10px; display: inline-block;"}
   .simple_counter
     Всего:
     .counter_number{:id => "all_counter"}
-      #{link_to Message.all.count, {:controller => "main", :action => "home", :messages => "all"}, :remote => true}
+      #{link_to Message.where("checked > 0").count, {:controller => "main", :action => "home", :messages => "all"}, :remote => true}
