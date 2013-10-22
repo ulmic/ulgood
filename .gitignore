@@ -8,3 +8,4 @@
 /config/initializers/omniauth.rb
 /config/initializers/secret_token.rb
 /db/schema.rb
+/coverage/

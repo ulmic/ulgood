@@ -13,18 +13,4 @@ class Account < ActiveRecord::Base
       account.uid = auth["uid"]
     end
   end
-
-  def self.get_info(auth)
-    case auth["provider"]
-      when 'vkontakte'
-        { name: auth["info"]["name"], avatar: auth["extra"]["raw_info"]["photo_big"] }
-      when 'facebook'
-        { name: auth["extra"]["raw_info"]["name"], avatar: auth["info"]["image"] }
-      when 'twitter'
-        { name: auth["info"]["name"], avatar: auth["info"]["image"] }
-      when 'google'
-        { name: auth["info"]["name"], avatar: auth["info"]["image"] }
-    end
-  end
-
 end

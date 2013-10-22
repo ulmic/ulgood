@@ -7,7 +7,7 @@ class AccountsController < ApplicationController
     if current_user
       current_user.accounts << account
     else
-      info = Account.get_info(auth)
+      info = omniauth_get_info(auth)
       new_user = User.create name: info[:name], avatar: info[:avatar]
       new_user.accounts << account
     end
