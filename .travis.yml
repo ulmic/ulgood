@@ -4,3 +4,4 @@ rvm:
 env:
   - DB=sqlite3
   - DB=postgres
+before_script:
