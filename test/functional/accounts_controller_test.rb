@@ -8,6 +8,7 @@ class AccountsControllerTest < ActionController::TestCase
     @request.env["omniauth.auth"] = oauth "vkontakte"
     get :login
     assert_not_nil session[:account_id]
+    assert_not_nil current_user.accounts.find(session[:account_id])
     assert_redirected_to :root
   end
 
@@ -15,6 +16,7 @@ class AccountsControllerTest < ActionController::TestCase
     @request.env["omniauth.auth"] = oauth "facebook"
     get :login
     assert_not_nil session[:account_id]
+    assert_not_nil current_user.accounts.find(session[:account_id])
     assert_redirected_to :root
   end
 
@@ -22,6 +24,7 @@ class AccountsControllerTest < ActionController::TestCase
     @request.env["omniauth.auth"] = oauth "twitter"
     get :login
     assert_not_nil session[:account_id]
+    assert_not_nil current_user.accounts.find(session[:account_id])
     assert_redirected_to :root
   end
 
@@ -29,6 +32,7 @@ class AccountsControllerTest < ActionController::TestCase
     @request.env["omniauth.auth"] = oauth "google"
     get :login
     assert_not_nil session[:account_id]
+    assert_not_nil current_user.accounts.find(session[:account_id])
     assert_redirected_to :root
   end
 
