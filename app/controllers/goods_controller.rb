@@ -4,8 +4,8 @@ class GoodsController < ApplicationController
   end
 
   def create
-    @good = current_account.goods.build params[:good]
-    if @good.save!
+    @good = current_account.goods.new params[:good]
+    if @good.save
       flash[:notice] = t :post_success
       redirect_to current_user
     else

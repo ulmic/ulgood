@@ -23,4 +23,11 @@ class GoodsControllerTest < ActionController::TestCase
     assert_redirected_to controller: "users", action: "show", id: current_user.id
   end
 
+  test "should not create good" do
+    @request.env["HTTP_REFERER"] = '/'
+    post :create, good: { text: 'Малобукв'}
+    assert_response :redirect
+    assert_not_nil flash[:notice]
+  end
+
 end
