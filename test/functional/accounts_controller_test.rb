@@ -7,32 +7,40 @@ class AccountsControllerTest < ActionController::TestCase
   test "should login vkontakte" do
     @request.env["omniauth.auth"] = oauth "vkontakte"
     get :login
-    assert_not_nil session[:account_id]
-    assert_not_nil current_user.accounts.find(session[:account_id])
+    assert_not_nil current_account
+    assert_equal current_user.accounts.find(session[:account_id]), current_account
     assert_redirected_to :root
   end
 
   test "should login facebook" do
     @request.env["omniauth.auth"] = oauth "facebook"
     get :login
-    assert_not_nil session[:account_id]
-    assert_not_nil current_user.accounts.find(session[:account_id])
+    assert_not_nil current_account
+    assert_equal current_user.accounts.find(session[:account_id]), current_account
     assert_redirected_to :root
   end
 
   test "should login twitter" do
     @request.env["omniauth.auth"] = oauth "twitter"
     get :login
-    assert_not_nil session[:account_id]
-    assert_not_nil current_user.accounts.find(session[:account_id])
+    assert_not_nil current_account
+    assert_equal current_user.accounts.find(session[:account_id]), current_account
     assert_redirected_to :root
   end
 
   test "should login google" do
     @request.env["omniauth.auth"] = oauth "google"
     get :login
-    assert_not_nil session[:account_id]
-    assert_not_nil current_user.accounts.find(session[:account_id])
+    assert_not_nil current_account
+    assert_equal current_user.accounts.find(session[:account_id]), current_account
+    assert_redirected_to :root
+  end
+
+  test "should not login with wrong user" do
+    @request.env["omniauth.auth"] = oauth "vkontakte"
+    @request.env["omniauth.auth"]["info"]["image"]="invalid string"
+    get :login
+    assert_nil current_account
     assert_redirected_to :root
   end
 
