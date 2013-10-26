@@ -6,6 +6,7 @@ Ulgood::Application.routes.draw do
 
   resource :accounts, only:[] do
     collection do
+      get 'login'
       get 'logout', as: :logout
     end
   end
