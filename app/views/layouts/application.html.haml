@@ -1,9 +1,39 @@
 !!! 5
 %html
   %head
-    %title =t :title
+    %title
+      =t :title
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
+
+
+  %body
+    .container-fluid
+      .navbar
+        .navbar-inner
+          %ul.nav
+            %li
+              .link-logo
+                =link_to root_path do
+                  =image_tag "logo.png", class: "logo"
+                  .brand
+                    =t('name')
+          %ul.nav.user-panel
+            %li
+              =link_to user_path(current_user), class: 'user_link' do
+                =image_tag current_user.avatar, class: 'ava_little' if current_user.avatar
+                =current_user.name
+            %li
+              =link_to t('exit'), logout_accounts_path
+    .row
+      .span8.offset2
+        =yield
+
+    .footer
+      =t('credits')
+      |
+      %a{href: "/about"}
+        =t('about')
+      =image_tag "men.png", class: "people"

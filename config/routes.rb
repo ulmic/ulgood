@@ -2,10 +2,11 @@ Ulgood::Application.routes.draw do
 
   root to: "main#home"
 
+  get 'auth/:provider/callback', to: 'accounts#login', as: :login
+
   resource :accounts, only:[] do
     collection do
-      get 'login'
-      get 'logout'
+      get 'logout', as: :logout
     end
   end
 

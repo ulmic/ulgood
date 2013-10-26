@@ -1,3 +1,99 @@
-// Place all the styles related to the main controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$orange: #F9BD27;
+
+.container-fluid {
+  width:100%;
+  padding: 0;
+}
+
+body {
+  z-index:10;
+  min-height: 500px;
+  min-width: 1024px;
+  font-family:micfont;
+  font-size: 20px;
+  line-height: 15px;
+}
+
+.main {
+  position: absolute;
+  top:40%;
+  margin-top: 20px;
+  line-height: 20px;
+  font-size: 25px;
+}
+
+.headtext {
+  float:right;
+  font-size:50px;
+  margin-right: 20px;
+}
+
+.top_line {
+  margin-top:30px;
+}
+
+.logo {
+  margin-left: 20px;
+  height:190px;
+}
+
+.login_buttons {
+  margin: 0;
+  position:absolute;
+  z-index:5;
+  top: 55%;
+}
+
+.login_buttons img {
+  height: 55px;
+  border: 6px solid $orange;
+  background-color: $orange;
+}
+
+.just_orange_line {
+  z-index:-1;
+  position: relative;
+  top:60px;
+  height:10px;
+  background-color:$orange;
+}
+
+.footer {
+  width: 100%;
+  position:fixed;
+  bottom: 10px;
+}
+
+.people {
+  position:absolute;
+  bottom:0;
+  right:0;
+  height:250px;
+  z-index: -2;
+}
+
+.navbar-inner {
+  padding:0;
+
+  .logo {
+    height:38px;
+    float:left;
+    padding-right: 10px;
+  }
+
+  .user-panel {
+    float:right;
+
+    .user_link {
+
+    }
+    .ava_little {
+      height: 20px;
+    }
+  }
+}
+
+.orange {
+  color: $orange;
+  font-weight:bold;
+}

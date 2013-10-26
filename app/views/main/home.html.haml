@@ -1,2 +1,21 @@
-%h1 Main#home
-%p Find me in app/views/main/home.html.haml
+.row-fluid.main
+  .span10.offset2
+    %p
+      %span.orange
+        =t('.good')
+      =t('.day')
+    %p
+      =t('.auth')
+    %p
+      =t('.add')
+
+.row-fluid.login_buttons
+  %hr.just_orange_line
+  .span1.offset1
+    =link_to (image_tag "vkontakte-icon.png"), "/auth/vkontakte"
+  .span1.offset2
+    =link_to (image_tag "facebook-icon.png"), "/auth/faceboook"
+  .span1.offset2
+    =link_to (image_tag "twitter-icon.png"), "/auth/twitter"
+  .span1.offset2
+    =link_to (image_tag "google-icon.png"), "/auth/google"

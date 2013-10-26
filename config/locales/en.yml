@@ -1,6 +1,15 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
+  name: 'Ulgood'
+  head: 'No day without good deal!'
+  title: 'Ulgood: Twitter of the Good Deals!'
+  credits: '2013, Ulgood.ru, "MIC", ulmic.ru'
+  about: 'About Ulgood'
+  exit: 'Logout'
+  main:
+    home:
+      good: 'Good'
+      day: 'day!'
+      auth: 'Please, authorize to your social network account:'
+      add: '(You will can add some else in your profile page)'
   errors:
     provider: "Provider is not valid"
