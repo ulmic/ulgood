@@ -16,7 +16,7 @@
           =image_tag "mic_logo_#{I18n.locale}.jpg", class: "logo"
         .span8.offset2
           %h1.headtext
-            =t('head').upcase
+            =t('head').mb_chars.upcase
       = yield
 
     .footer

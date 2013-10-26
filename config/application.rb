@@ -17,5 +17,6 @@ module Ulgood
     config.assets.version = '1.0'
     config.autoload_paths += %W(#{config.root}/lib)
     config.time_zone = "Moscow"
+    I18n.default_locale = :ru
   end
 end
