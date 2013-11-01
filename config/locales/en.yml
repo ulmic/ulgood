@@ -14,3 +14,4 @@ en:
   errors:
     provider: "Provider is not valid"
   post: "Send!"
+  delete_success: "Good deal successfully deleted. Don't forget to write new!"

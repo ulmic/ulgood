@@ -1,13 +1,16 @@
 .row
   =render "form"
-%br
 .row
   .span8.goods
-    -Good.all.group_by{|good| good.created_at.to_date}.each_pair do |date, goods|
+    %p
+    -Good.find_all_by_checked(true).group_by{|good| good.created_at.to_date}.each_pair do |date, goods|
       %p
         %span.date
-          =l(date)
-      -goods.each do |good|
+          -if date == Date.today
+            =t("today")
+          -else
+            =l(date)
+      -goods..each do |good|
         %p
           %span.orange
             %a{href: user_path(good.user.id)}

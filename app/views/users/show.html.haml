@@ -25,8 +25,14 @@
     -@user.goods.group_by{|good| good.created_at.to_date}.each_pair do |date, goods|
       %p
         %span.date
-          =l(date)
+          -if date == Date.today
+            =t("today")
+          -else
+            =l(date)
       -goods.each do |good|
         %p{class: "#{"gray" unless good.checked?}"}
           \-
           =good.text
+          -if @user == current_user
+            =link_to(good_path(good.id), method: :delete) do
+              x
