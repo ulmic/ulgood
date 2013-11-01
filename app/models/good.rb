@@ -8,4 +8,8 @@ class Good < ActiveRecord::Base
     Good.where(created_at: Time.now.midnight..Time.now)
   end
 
+  def user
+    self.account.user
+  end
+
 end

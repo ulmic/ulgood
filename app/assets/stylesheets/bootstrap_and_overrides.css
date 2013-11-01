@@ -9,3 +9,8 @@
 .text-orange {
     color: #F9BD27;
 }
+
+.label {
+    font-size: 20px;
+    line-height: 20px;
+}

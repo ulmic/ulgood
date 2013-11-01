@@ -7,3 +7,8 @@
     font-family: micfont;
     src: url(PFSquareSansPro-Regular.ttf)
 }
+
+.date {
+    font-size: 30px;
+    color: #999;
+}

@@ -22,6 +22,7 @@ group :test do
 end
 
 group :development do
+  gem 'meta_request'
   gem 'better_errors'
 end
 

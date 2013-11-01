@@ -1,0 +1,8 @@
+=simple_form_for current_account.goods.new do |f|
+  .input-prepend.input-append.span8
+    %label.add-on.span2
+      =image_tag "#{current_account.provider}-small-icon.png"
+    =f.input_field :text, label: false, class: "span5"
+    %span#counter.add-on
+      0
+    =f.button :submit, t(:post), class: "btn"

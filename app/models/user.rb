@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
   def has_account_in(provider)
     self.accounts.find_by_provider(provider).present?
   end
+
+  def goods
+    self.accounts.map{|acc|acc.goods}.flatten.sort_by{|good| good.created_at}
+  end
 end

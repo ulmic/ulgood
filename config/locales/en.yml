@@ -13,3 +13,4 @@ en:
       add: '(You will can add some else in your profile page)'
   errors:
     provider: "Provider is not valid"
+  post: "Send!"

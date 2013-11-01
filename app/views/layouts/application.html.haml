@@ -34,6 +34,7 @@
     .footer
       =t('credits')
       |
-      %a{href: "/about"}
+      %a{href: "#about", role: "button", "data-toggle" => "modal" }
         =t('about')
       =image_tag "men.png", class: "people"
+  =render 'layouts/about'
