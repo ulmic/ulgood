@@ -1,5 +1,5 @@
 class Account < ActiveRecord::Base
-  attr_accessible :provider, :uid
+  attr_accessible :provider, :uid, :url
 
   belongs_to :user
   has_many :goods, :dependent => :destroy
@@ -11,6 +11,7 @@ class Account < ActiveRecord::Base
     find_by_provider_and_uid(auth["provider"], auth["uid"]) || create! do |account|
       account.provider = auth["provider"]
       account.uid = auth["uid"]
+      account.url = account.provider == "google" ? "mailto:#{auth["info"]["email"]}" : auth["info"]["urls"][account.provider.capitalize]
     end
   end
 end

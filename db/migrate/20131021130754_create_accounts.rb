@@ -3,6 +3,7 @@ class CreateAccounts < ActiveRecord::Migration
     create_table :accounts do |t|
       t.string :provider
       t.string :uid
+      t.string :url
       t.references :user
 
       t.timestamps

@@ -1,2 +1,19 @@
-%h1 Users#show
-%p Find me in app/views/users/show.html.haml
+.row
+  .span2
+    =image_tag @user.avatar || "anonim.jpg", class: :avatar
+  .span6
+    .row
+      %h1
+        %p.text-orange
+          =@user.name
+    .row
+      .social-panel
+        -providers.each do |provider|
+          -if @user.has_account_in provider
+            %a{href: @user.accounts.find_by_provider(provider).url}
+              =image_tag "#{provider}-icon.png"
+          -else
+            -if @user == current_user
+              %a{href: "/auth/#{provider}"}
+                //TODO: routes
+                =image_tag "#{provider}-icon-gray.png"
