@@ -1,0 +1,14 @@
+.row.counter-head
+  =t('.good_deals')
+.row.counter
+  .span1
+    .row.time
+      =t('.today')
+    .row.count
+      =Good.today.find_by_checked(true).to_a.count
+  .span1
+    .row.time
+      =t('.all')
+    .row.count
+      =Good.find_by_checked(true).to_a.count
+

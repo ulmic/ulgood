@@ -15,3 +15,8 @@ en:
     provider: "Provider is not valid"
   post: "Send!"
   delete_success: "Good deal successfully deleted. Don't forget to write new!"
+  layouts:
+    counters:
+      good_deals: "Good deals:"
+      today: "Today:"
+      all: "All time:"

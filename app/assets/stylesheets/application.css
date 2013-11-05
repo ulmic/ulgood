@@ -12,3 +12,26 @@
     font-size: 30px;
     color: #999;
 }
+
+.counters {
+    text-align: center;
+}
+
+.counter-head {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.count {
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #999;
+}
+
+.time {
+    font-size:25px;
+    line-height: 40px;
+    font-weight: bold;
+}
