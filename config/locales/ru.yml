@@ -25,3 +25,10 @@ ru:
       good_deals: "Добрые дела:"
       today: "Сегодня"
       all: "Всего:"
+    application:
+      unchecked: "Новые"
+  admins:
+    posts:
+      unchecked: "Непроверенные добрые дела:"
+      accept: "Добро!"
+      decline: "Не добро"

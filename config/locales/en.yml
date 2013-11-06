@@ -20,3 +20,9 @@ en:
       good_deals: "Good deals:"
       today: "Today:"
       all: "All time:"
+    application:
+      unchecked: "Check"
+  admins:
+    posts:
+      accept: "Good"
+      decline: "Not good"

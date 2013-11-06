@@ -4,6 +4,11 @@ Ulgood::Application.routes.draw do
 
   get 'auth/:provider/callback', to: 'accounts#login', as: :login
 
+  resource :admins, only:[] do
+    get 'users'
+    get 'posts'
+  end
+
   resource :accounts, only:[] do
     collection do
       get 'login'
@@ -11,7 +16,12 @@ Ulgood::Application.routes.draw do
     end
   end
 
-  resources :goods, only: [:index, :create, :destroy]
+  resources :goods, only: [:index, :create, :destroy] do
+    member do
+      get 'check'
+    end
+  end
+
   resources :users, only: [:show] do
   end
 

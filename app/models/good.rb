@@ -5,11 +5,15 @@ class Good < ActiveRecord::Base
   validates :text, presence: true, length: {in: 10..100}
 
   def self.today
-    Good.where(created_at: Time.now.midnight..Time.now)
+    where(created_at: Time.now.midnight..Time.now)
   end
 
   def user
     self.account.user
+  end
+
+  def self.unchecked
+    find_all_by_checked(false || nil)
   end
 
 end

@@ -14,3 +14,10 @@
     font-size: 20px;
     line-height: 20px;
 }
+
+.input-prepend.input-append .btn {
+    font-family: micfont;
+    font-weight: bold;
+    font-size: 20px;
+    color: #444;
+}

@@ -1,6 +1,20 @@
 class GoodsController < ApplicationController
+
+  before_filter do
+    redirect_to :root unless account_signed_in?
+  end
+
   def index
     @goods =  params[:all] ? Good.all : Good.today
+  end
+
+  def check
+    @good = Good.find params[:id]
+    if admin_signed_in?
+      @good.checked=true
+      @good.save
+    end
+    redirect_to :back
   end
 
   def create
@@ -16,7 +30,7 @@ class GoodsController < ApplicationController
 
   def destroy
     @good = Good.find params[:id]
-    if @good.user == current_user
+    if @good.user == current_user || admin_signed_in?
       if @good.destroy
         flash[:notice] = t :delete_success
         redirect_to :back

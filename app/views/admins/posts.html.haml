@@ -1,0 +1,15 @@
+.row
+  %h1
+    =t('.unchecked')
+.row
+  .span8.good
+    -Good.unchecked.to_a.each do |good|
+      %p#good
+        %span.orange
+          %a{href: user_path(good.user.id)}
+            =good.user.name
+        =good.text
+        =link_to check_good_path(id: good.id) do
+          %span.orange=t('.accept')
+        =link_to good_path(id: good.id), method: :delete do
+          =t('.decline')

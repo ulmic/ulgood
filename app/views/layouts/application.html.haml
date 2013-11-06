@@ -17,14 +17,17 @@
             %li
               .link-logo
                 =link_to root_path do
-                  =image_tag "logo.png", class: "logo"
+                  =image_tag 'logo.png', class: 'logo'
                   .brand
                     =t('name')
           %ul.nav.user-panel
             %li
               =link_to user_path(current_user), class: 'user_link' do
                 =image_tag current_user.avatar, class: 'ava_little' if current_user.avatar
-                =current_user.name
+                %span{class: "#{"orange" if current_user.admin?}"}=current_user.name
+            -if current_user.admin?
+              %li
+                =link_to "#{t('.unchecked')}:#{Good.unchecked.count} ", posts_admins_path
             %li
               =link_to t('exit'), logout_accounts_path
     .row

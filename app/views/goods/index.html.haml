@@ -1,4 +1,4 @@
-.row
+.row.form
   =render "form"
 .row
   .span8.goods
@@ -10,7 +10,7 @@
             =t("today")
           -else
             =l(date)
-      -goods..each do |good|
+      -goods.each do |good|
         %p
           %span.orange
             %a{href: user_path(good.user.id)}
