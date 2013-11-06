@@ -5,10 +5,9 @@
     .row.time
       =t('.today')
     .row.count
-      =Good.today.find_all_by_checked(true).to_a.count
+      =Good.today.checked.count
   .span1
     .row.time
       =t('.all')
     .row.count
-      =Good.find_all_by_checked(true).to_a.count
-
+      =Good.checked.count

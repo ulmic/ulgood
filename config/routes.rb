@@ -2,7 +2,15 @@ Ulgood::Application.routes.draw do
 
   root to: "main#home"
 
-  get 'auth/:provider/callback', to: 'accounts#login', as: :login
+
+  get 'auth/:provider', to: 'accounts#login', as: :login
+  get 'auth/:provider/callback', to: 'accounts#login'
+
+
+  resource :admins, only:[] do
+    get 'users'
+    get 'posts'
+  end
 
   resource :admins, only:[] do
     get 'users'

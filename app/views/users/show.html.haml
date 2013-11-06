@@ -3,7 +3,7 @@
     =flash[:notice]
 .row
   .span2
-    =image_tag @user.avatar || "anonim.jpg", class: :avatar
+    =image_tag @user.avatar || 'anonim.jpg', class: :avatar
   .span6
     .row
       %h1
@@ -17,20 +17,20 @@
               =image_tag "#{provider}-icon.png"
           -else
             -if @user == current_user
-              %a{href: "/auth/#{provider}"}
-                //TODO: routes
+              =link_to login_path(provider: provider) do
                 =image_tag "#{provider}-icon-gray.png"
 .row.goods
   .span8
+    //-@user.goods.checked_with_date.each_pair do |date, goods|
     -@user.goods.group_by{|good| good.created_at.to_date}.each_pair do |date, goods|
       %p
         %span.date
           -if date == Date.today
-            =t("today")
+            =t('today')
           -else
             =l(date)
       -goods.each do |good|
-        %p{class: "#{"gray" unless good.checked?}"}
+        %p{class: "#{'gray' unless good.checked?}"}
           \-
           =good.text
           -if @user == current_user

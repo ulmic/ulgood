@@ -12,7 +12,6 @@ en:
       auth: 'Please, authorize to your social network account:'
       add: '(You will can add some else in your profile page)'
   errors:
-    provider: "Provider is not valid"
   post: "Send!"
   delete_success: "Good deal successfully deleted. Don't forget to write new!"
   layouts:
@@ -26,3 +25,12 @@ en:
     posts:
       accept: "Good"
       decline: "Not good"
+      unchecked: "Unchecked good deals:"
+  errors:
+    user:
+      create: "User creating error!"
+    provider: "Provider is not valid"
+  post_success: "Thanks for good deal! It will be on the main page after we check it."
+  no_unchecked: "There is no unchecked good deals yet!"
+  today: "Today:"
+  about_head: "About Ulgood"

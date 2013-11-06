@@ -3,7 +3,7 @@
     =t('.unchecked')
 .row
   .span8.good
-    -Good.unchecked.to_a.each do |good|
+    -Good.unchecked.each do |good|
       %p#good
         %span.orange
           %a{href: user_path(good.user.id)}

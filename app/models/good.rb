@@ -13,7 +13,16 @@ class Good < ActiveRecord::Base
   end
 
   def self.unchecked
-    find_all_by_checked(false || nil)
+    find_all_by_checked(nil).to_a
+  end
+
+  #TODO: So, let's drop it out to decorators
+  def self.checked_with_date
+    find_all_by_checked(true).group_by{|good| good.created_at.to_date}
+  end
+
+  def self.checked
+    find_all_by_checked(true).to_a
   end
 
 end

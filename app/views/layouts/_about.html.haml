@@ -1,9 +1,10 @@
-.modal.hide#about{tabindex: -1, role: "dialog", "aria-labelledby" => "Label", "aria-hidden" => true}
+.modal.hide#about{tabindex: -1, role: 'dialog', 'aria-labelledby' => 'Label', 'aria-hidden' => true}
   .modal-header
-    %button.close{type: "button", "data-dismiss" => "modal", "aria-hidden" => true}
+    %button.close{type: 'button', 'data-dismiss' => 'modal', 'aria-hidden' => true}
       x
     %h3#Label
-      О сайте
+      =t('about_head')
   .modal-body
     %p
-      Здесь будет информация о сайте
+      TODO: about information
+      =#TODO: about information

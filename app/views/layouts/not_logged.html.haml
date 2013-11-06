@@ -3,25 +3,17 @@
   %head
     %title
       =t('title')
-    = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
+    = stylesheet_link_tag    'application', :media => 'all'
+    = javascript_include_tag 'application'
     = csrf_meta_tags
-  %body
-
 
   %body
     .container-fluid
       .row-fluid.top_line
         .span2
-          =image_tag "mic_logo_#{I18n.locale}.jpg", class: "logo"
+          =image_tag "mic_logo_#{I18n.locale}.jpg", class: 'logo'
         .span8.offset2
-          %h1.headtext
+          %h1.head_text
             =t('head').mb_chars.upcase
       = yield
-
-    .footer
-      =t('credits')
-      |
-      %a{href: "/about"}
-        =t('about')
-      =image_tag "men.png", class: "people"
+    =render 'layouts/footer'

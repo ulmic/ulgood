@@ -3,8 +3,8 @@
   %head
     %title
       =t :title
-    = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
+    = stylesheet_link_tag    'application', :media => 'all'
+    = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
 
@@ -24,7 +24,7 @@
             %li
               =link_to user_path(current_user), class: 'user_link' do
                 =image_tag current_user.avatar, class: 'ava_little' if current_user.avatar
-                %span{class: "#{"orange" if current_user.admin?}"}=current_user.name
+                %span{class: "#{'orange' if current_user.admin?}"}=current_user.name
             -if current_user.admin?
               %li
                 =link_to "#{t('.unchecked')}:#{Good.unchecked.count} ", posts_admins_path
@@ -35,10 +35,4 @@
         =yield
       .span2.counters
         =render 'layouts/counters'
-    .footer
-      =t('credits')
-      |
-      %a{href: "#about", role: "button", "data-toggle" => "modal" }
-        =t('about')
-      =image_tag "men.png", class: "people"
-  =render 'layouts/about'
+    =render 'layouts/footer'

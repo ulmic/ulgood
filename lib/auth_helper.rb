@@ -1,5 +1,5 @@
 module AuthHelper
-  # account auth
+
   def account_sign_in(account)
     session[:account_id] = account.id
     session[:admin_id] = account.id if account.user.admin?
@@ -19,8 +19,6 @@ module AuthHelper
       Account.find(session[:account_id])
     end
   end
-
-  #User
 
   def current_user
     current_account.user if current_account

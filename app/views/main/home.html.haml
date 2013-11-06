@@ -12,10 +12,10 @@
 .row-fluid.login_buttons
   %hr.just_orange_line
   .span1.offset1
-    =link_to (image_tag "vkontakte-icon.png"), "/auth/vkontakte"
+    =link_to (image_tag 'vkontakte-icon.png'), login_path('vkontakte')
   .span1.offset2
-    =link_to (image_tag "facebook-icon.png"), "/auth/faceboook"
+    =link_to (image_tag 'facebook-icon.png'), login_path('facebook')
   .span1.offset2
-    =link_to (image_tag "twitter-icon.png"), "/auth/twitter"
+    =link_to (image_tag 'twitter-icon.png'), login_path('twitter')
   .span1.offset2
-    =link_to (image_tag "google-icon.png"), "/auth/google"
+    =link_to (image_tag 'google-icon.png'), login_path('google')

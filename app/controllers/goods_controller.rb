@@ -23,7 +23,7 @@ class GoodsController < ApplicationController
       flash[:notice] = t :post_success
       redirect_to current_user
     else
-      flash[:notice] = @good.errors.full_messages.each { |m| "<p>#{m}</p>" }
+      flash[:notice] = @good.errors.full_messages.each { |m| "<p class='flash'>#{m}</p>" }
       redirect_to :back
     end
   end
@@ -35,7 +35,7 @@ class GoodsController < ApplicationController
         flash[:notice] = t :delete_success
         redirect_to :back
       else
-        flash[:notice] = @good.errors.full_messages.each { |m| "<p>#{m}</p>" }
+        flash[:notice] = @good.errors.full_messages.each { |m| "<p class='flash'>#{m}</p>" }
         redirect_to :back
       end
     end
