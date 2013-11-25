@@ -11,6 +11,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :public_network
   config.vm.boot_timeout = 60
   config.vm.graceful_halt_timeout = 60
-  config.vm.hostname = "ulgood.ru.local"
+  config.vm.hostname = "ulgood"
 
 end

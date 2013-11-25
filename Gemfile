@@ -30,6 +30,7 @@ group :server do
   gem 'sqlite3'
   gem 'capi'
   gem 'capistrano_colors'
+  gem 'capistrano-ext'
   gem 'vagrant'
   gem 'unicorn'
   gem 'capistrano', group: :development
