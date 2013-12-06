@@ -1,6 +1,7 @@
 set :stages, %w(production vagrant staging)
 set :default_stage, "vagrant"
 
+require 'rvm/capistrano'
 require 'capistrano/ext/multistage'
 require 'capi/unicorn'
 require 'capistrano_colors'

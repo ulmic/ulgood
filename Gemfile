@@ -29,6 +29,7 @@ end
 group :server do
   gem 'sqlite3'
   gem 'capi'
+  gem 'rvm-capistrano'
   gem 'capistrano_colors'
   gem 'capistrano-ext'
   gem 'vagrant'
