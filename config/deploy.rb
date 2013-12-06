@@ -35,5 +35,5 @@ namespace :bundler do
   end
 end
 
-after "deploy:create_symlinks", "settings:restore", "db:migrate"
+after "deploy:create_symlink", "settings:restore", "db:migrate"
 before "db:migrate", "db:backup", "bundler:install"
