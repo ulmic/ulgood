@@ -19,7 +19,7 @@ default_run_options[:pty] = true
 
 namespace :settings do
   task :restore do
-    run "cd #{app_dir}/shared/settings && cp -Rf ./* #{current_path}/"
+    run "cd #{current_path} && bash ./lib/settings.sh"
   end
 end
 
